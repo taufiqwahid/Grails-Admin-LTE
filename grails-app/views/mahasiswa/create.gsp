@@ -10,15 +10,15 @@
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-            %{--CONTENTNYA--}%
+%{--CONTENTNYA--}%
 
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Data Mahasiswa</h3>
+            <h3 class="card-title">Tambah Data Mahasiswa</h3>
         </div>
-        <!-- /.card-header -->
-        <!-- form start -->
+    <!-- /.card-header -->
+    <!-- form start -->
 
         <g:form controller="mahasiswa" action="save" method="POST">
             <div class="card-body">
@@ -39,13 +39,13 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-%{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
+                %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
                 <g:actionSubmit value="save" class="btn btn-primary"/>
             </div>
         </g:form>
     </div>
 </div>
 
-            %{--PENUTUP CONTENTNYA--}%
+%{--PENUTUP CONTENTNYA--}%
 
 <g:render template="/layouts/Footer"/>

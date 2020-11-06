@@ -18,7 +18,7 @@ environments:
     development:
         dataSource:
             dbCreate: update
-            url: 'jdbc:mysql://localhost:3306/dbMahasiswa?autoReconnect=true&useSSL=false'
+            url: 'jdbc:mysql://localhost:3306/dbSiAKAD?autoReconnect=true&useSSL=false'
             username: root
             password:
 
