@@ -14,7 +14,7 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Ruangan</h3>
+            <h2 class="card-title">Tambah Ruangan</h2>
         </div>
     <!-- /.card-header -->
     <!-- form start -->

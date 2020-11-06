@@ -43,6 +43,7 @@
                                     <td>${matkul.semester}</td>
                                 </tr>
                             </g:each>
+                            </tbody>
                         </tfoot>
                         </table>
                     </div>

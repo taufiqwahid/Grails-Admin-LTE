@@ -31,20 +31,21 @@
                                 <th>Nama</th>
                                 <th>Emal</th>
                                 <th>Password</th>
-                                <th>Tanggal Buat/th>
+                                <th>Tanggal Buat</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            <g:each in="${akun}" var="akun">dosen
+                            <g:each in="${akun}" var="akn">
                                 <tr>
-                                    <td>${akun.id}</td>
-                                    <td>${akun.nama}</td>
-                                    <td>${akun.email}</td>
-                                    <td>${akun.password}</td>
-                                    <td>${akun.tanggal}</td>
+                                    <td>${akn.id}</td>
+                                    <td>${akn.nama}</td>
+                                    <td>${akn.email}</td>
+                                    <td>${akn.password}</td>
+                                    <td>${akn.tanggal}</td>
                                 </tr>
                             </g:each>
+                            </tbody>
                         </tfoot>
                         </table>
                     </div>

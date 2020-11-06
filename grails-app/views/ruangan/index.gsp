@@ -36,13 +36,14 @@
                             </thead>
                             <tbody>
                                 <tr>
-                            <g:each in="${ruangan}" var="ruangan">
-                                    <td>${ruangan.id}</td>
-                                    <td>${ruangan.kode}</td>
-                                    <td>${ruangan.nama}</td>
-                                    <td>${ruangan.lantai}</td>
+                                    <g:each in="${ruangan}" var="rgn">
+                                            <td>${rgn.id}</td>
+                                            <td>${rgn.kode}</td>
+                                            <td>${rgn.nama}</td>
+                                            <td>${rgn.lantai}</td>
+                                    </g:each>
                                 </tr>
-                            </g:each>
+                            </tbody>
                         </tfoot>
                         </table>
                     </div>

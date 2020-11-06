@@ -34,10 +34,8 @@
                     <label for="exampleInputEmail1">Stambuk</label>
                     <g:textField type="text" name="stambuk" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Stambuk"/>
                 </div>
-
             </div>
             <!-- /.card-body -->
-
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
                 <g:actionSubmit value="save" class="btn btn-primary"/>

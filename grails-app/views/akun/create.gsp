@@ -34,7 +34,6 @@
                         <label for="exampleInputEmail1">Password</label>
                         <g:textField type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Password"/>
                     </div>
-
                 </div>
                 <!-- /.card-body -->
 

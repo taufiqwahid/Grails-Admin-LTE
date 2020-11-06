@@ -52,6 +52,13 @@
                             Akun
                         </p>
                     </a>
+                </li><li class="nav-item btn-danger">
+                    <a href="/login" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
                 </li>
             </ul>
         </nav>

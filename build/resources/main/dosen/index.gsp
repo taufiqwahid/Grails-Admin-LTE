@@ -35,14 +35,15 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <g:each in="${dosen}" var="dosen">dosen
+                            <g:each in="${dosen}" var="dsn">
                                 <tr>
-                                    <td>${dosen.id}</td>
-                                    <td>${dosen.nama}</td>
-                                    <td>${dosen.nip}</td>
-                                    <td>${dosen.matakuliah}</td>
+                                    <td>${dsn.id}</td>
+                                    <td>${dsn.nama}</td>
+                                    <td>${dsn.nip}</td>
+                                    <td>${dsn.matakuliah}</td>
                                 </tr>
                             </g:each>
+                            </tbody>
                         </tfoot>
                         </table>
                     </div>

@@ -8,7 +8,8 @@ class Akun {
 
     static constraints = {
         nama nullable: false
-        email email: false
+        email email: true
         password nullable: false
+        tanggal nullable: false
     }
 }
