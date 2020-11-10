@@ -30,7 +30,7 @@
                     <g:textField type="text" name="nip" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Stambuk</label>
+                    <label for="exampleInputEmail1">Mata Kuliah</label>
                     <g:textField type="text" name="matakuliah" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah"/>
                 </div>
 

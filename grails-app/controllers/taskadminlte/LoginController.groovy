@@ -2,22 +2,20 @@ package taskadminlte
 
 class LoginController {
 
-    def index() { }
+    def index() {
+    }
     def cekLogin(){
 //        def akun = Akun.list()
 //        def email = akun.email.get(0)
 //        if (email == params.email){
 //            redirect controller:'dashboard', action:'index'
 //        }
-         def akun = Akun.findByEmailAndPassword(params.email, params.password)
+        def akun = Akun.findByEmailAndPassword(params.email, params.password)
         if (akun){
             redirect action:'index', controller:'mahasiswa'
         }else{
-            render('Email Atau Password Anda Salah')
-            render('<a href="/login/index">KEMBALI</a>')
-            redirect action: 'index'
+            redirect action: 'index', controller: 'login'
         }
-
 
 //        if (params.email == akun.email){
 //            println('BERHASIILLLLL')

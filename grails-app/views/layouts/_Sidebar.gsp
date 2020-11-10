@@ -52,7 +52,53 @@
                             Akun
                         </p>
                     </a>
-                </li><li class="nav-item btn-danger">
+                </li>
+                <li class="nav-item">
+                    <a href="/jadwal" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Jadwal
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/jurusan" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Jurusan
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/krs" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            KRS
+                        </p>
+                    </a>
+                </li><li class="nav-item">
+                    <a href="/nilai" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Nilai
+                        </p>
+                    </a>
+                </li><li class="nav-item">
+                    <a href="/penasehatAkademik" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Penasehat Akademik
+                        </p>
+                    </a>
+                </li><li class="nav-item">
+                    <a href="/tahunAkademik" class="nav-link align-bottom">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Tahun Akademik
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item btn-danger">
                     <a href="/login" class="nav-link align-bottom">
                         <i class="nav-icon fas fa-th"></i>
                         <p>

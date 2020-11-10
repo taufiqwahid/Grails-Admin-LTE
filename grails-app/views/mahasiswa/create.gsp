@@ -27,12 +27,28 @@
                     <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Jurusan</label>
-                    <g:textField type="text" name="jurusan" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jurusan"/>
+                    <label for="exampleInputEmail1">NIM</label>
+                    <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Stambuk</label>
-                    <g:textField type="text" name="stambuk" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Stambuk"/>
+                    <label for="exampleInputEmail1">Alamat</label>
+                    <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tanggal Lahir</label>
+                    <g:textField type="text" name="tglLahir" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tanggal Lahir"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">No Telepon</label>
+                    <g:textField type="text" name="noTelp" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No Telepon "/>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Jurusan</label>
+                        <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                            <g:each in="${jurusan}" var="jrs">
+                                <option value="${jrs.id}">${jrs.nama}</option>
+                            </g:each>
+                        </select>
                 </div>
             </div>
             <!-- /.card-body -->

@@ -31,6 +31,7 @@
                                 <th>Nama</th>
                                 <th>NIP</th>
                                 <th>Mata Kuliah</th>
+                                <th class="text-center">Opsi</th>
 
                             </tr>
                             </thead>
@@ -41,6 +42,11 @@
                                     <td>${dsn.nama}</td>
                                     <td>${dsn.nip}</td>
                                     <td>${dsn.matakuliah}</td>
+                                    <td class="text-center">
+                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${dsn.id}">Update</g:link></div>
+
+                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${dsn.id}">Hapus</g:link></div>
+                                    </td>
                                 </tr>
                             </g:each>
                             </tbody>

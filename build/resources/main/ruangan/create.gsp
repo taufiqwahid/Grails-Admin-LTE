@@ -27,13 +27,12 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Ruangan</label>
-                    <g:textField type="text" name="jurusan" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Ruangan"/>
+                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Ruangan"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Lantai</label>
-                    <g:textField type="text" name="stambuk" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Lantai"/>
+                    <g:textField type="text" name="lantai" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Lantai"/>
                 </div>
-
             </div>
             <!-- /.card-body -->
 

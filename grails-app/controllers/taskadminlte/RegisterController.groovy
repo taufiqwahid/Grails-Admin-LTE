@@ -7,7 +7,7 @@ class RegisterController {
     def save(){
         def register = new Akun(params)
         println(register)
-        register.save(failOnError: true)
+        register.save flush:true, failOnError:true
         redirect controller:'login', action: 'index'
     }
 }

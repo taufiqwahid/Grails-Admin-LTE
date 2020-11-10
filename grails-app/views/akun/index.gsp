@@ -33,7 +33,6 @@
                                 <th>Password</th>
                                 <th>Tanggal Buat</th>
                                 <th class="text-center">Opsi</th>
-
                             </tr>
                             </thead>
                             <tbody>
@@ -45,58 +44,18 @@
                                     <td>${akn.password}</td>
                                     <td>${akn.tanggal}</td>
                                     <td class="text-center">
-                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${akn.id}">Edit</g:link></div>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter" id="${akn.id}">EDIIIT
-                                        </button>
-                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${akn.id}">Hapus</g:link></div>
+                                        <div class="btn btn-warning">
+                                            <g:link action="edit" class="text-light" id="${akn.id}">Update</g:link>
+                                        </div>
+                                        <div class="btn btn-danger">
+                                            <g:link action="delete" class="text-light" id="${akn.id}">Hapus</g:link>
+                                        </div>
                                     </td>
                                 </tr>
                             </g:each>
                             </tbody>
                         </tfoot>
                         </table>
-
-
-
-%{--                    <!-- Modal -->--}%
-%{--                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">--}%
-%{--                        <div class="modal-dialog modal-dialog-centered" role="document">--}%
-%{--                            <div class="modal-content">--}%
-%{--                                <div class="modal-header">--}%
-%{--                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>--}%
-%{--                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
-%{--                                        <span aria-hidden="true">&times;</span>--}%
-%{--                                    </button>--}%
-%{--                                </div>--}%
-%{--                                <div class="modal-body">--}%
-%{--                                        <g:form action="save"/>--}%
-%{--                                        <div class="form-group">--}%
-%{--                                            <label for="recipient-name" class="col-form-label">Nama</label>--}%
-%{--                                            <input type="text" class="form-control" id="recipient-name" name="nama">--}%
-%{--                                            <g:textField name="nama" value="${akunDetail.nama}" class="form-control" id="recipient-name" />--}%
-%{--                                        </div>--}%
-%{--                                        <div class="form-group">--}%
-%{--                                            <label for="recipient-name" class="col-form-label">Email</label>--}%
-%{--                                            <input type="email" class="form-control" id="recipient-name" name="email">--}%
-%{--                                            <g:textField name="nama" value="${akunDetail.email}" class="form-control" id="recipient-name" />--}%
-%{--                                        </div>--}%
-%{--                                        <div class="form-group">--}%
-%{--                                            <label for="recipient-name" class="col-form-label">Password</label>--}%
-%{--                                            <input type="text" class="form-control" id="recipient-name" name="password">--}%
-%{--                                            <g:textField name="nama" value="${akunDetail.password}" class="form-control" id="recipient-name" />--}%
-%{--                                        </div>--}%
-%{--                                </div>--}%
-%{--                                <div class="modal-footer">--}%
-%{--                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}%
-%{--                                    <g:actionSubmit name="save" value="UPDATE" class="btn btn-primary" />--}%
-%{--                                </div>--}%
-%{--                            <g:form/>--}%
-%{--                            </div>--}%
-%{--                        </div>--}%
-%{--                    </div>--}%
-
-
-
                     </div>
                     <!-- /.card-body -->
                 </div>

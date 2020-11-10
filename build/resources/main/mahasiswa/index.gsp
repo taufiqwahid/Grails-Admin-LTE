@@ -28,8 +28,12 @@
                             <tr>
                                 <th>#</th>
                                 <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Alamat</th>
+                                <th>Tgl Lahir</th>
+                                <th>No Telp</th>
                                 <th>Jurusan</th>
-                                <th>Stambuk</th>
+                                <th class="text-center">Opsi</th>
                                 
                             </tr>
                             </thead>
@@ -38,9 +42,18 @@
                             <tr>
                                 <td>${mhs.id}</td>
                                 <td>${mhs.nama}</td>
-                                <td>${mhs.jurusan}</td>
-                                <td>${mhs.stambuk}</td>
+                                <td>${mhs.nim}</td>
+                                <td>${mhs.alamat}</td>
+                                <td>${mhs.tglLahir}</td>
+                                <td>${mhs.noTelp}</td>
+                                <td>${mhs.jurusan.nama}</td>
+                                <td class="text-center">
+                                    <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${mhs.id}">Update</g:link></div>
+
+                                    <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mhs.id}">Hapus</g:link></div>
+                                </td>mhs
                             </tr>
+
                             </g:each>
                         </tfoot>
                         </table>

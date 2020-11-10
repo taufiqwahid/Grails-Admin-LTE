@@ -32,7 +32,7 @@
                                 <th>Emal</th>
                                 <th>Password</th>
                                 <th>Tanggal Buat</th>
-
+                                <th class="text-center">Opsi</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -43,6 +43,14 @@
                                     <td>${akn.email}</td>
                                     <td>${akn.password}</td>
                                     <td>${akn.tanggal}</td>
+                                    <td class="text-center">
+                                        <div class="btn btn-warning">
+                                            <g:link action="edit" class="text-light" id="${akn.id}">Update</g:link>
+                                        </div>
+                                        <div class="btn btn-danger">
+                                            <g:link action="delete" class="text-light" id="${akn.id}">Hapus</g:link>
+                                        </div>
+                                    </td>
                                 </tr>
                             </g:each>
                             </tbody>
