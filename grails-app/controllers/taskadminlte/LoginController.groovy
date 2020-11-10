@@ -12,8 +12,11 @@ class LoginController {
 //        }
         def akun = Akun.findByEmailAndPassword(params.email, params.password)
         if (akun){
-            redirect action:'index', controller:'mahasiswa'
+            flash.message =  "Login Success !"
+            session["user"] = 'upi'
+            redirect action:'index', controller:'dashboard'
         }else{
+            flash.message =  "Login Failed !"
             redirect action: 'index', controller: 'login'
         }
 

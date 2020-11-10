@@ -30,10 +30,18 @@
                     <g:textField type="text" name="nip" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mata Kuliah</label>
-                    <g:textField type="text" name="matakuliah" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah"/>
+                    <label for="exampleInputEmail1">Alamat</label>
+                    <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat"/>
                 </div>
 
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Jurusan</label>
+                    <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                        <g:each in="${jurusan}" var="jrs">
+                            <option value="${jrs.id}">${jrs.nama}</option>
+                        </g:each>
+                    </select>
+                </div>
             </div>
             <!-- /.card-body -->
 

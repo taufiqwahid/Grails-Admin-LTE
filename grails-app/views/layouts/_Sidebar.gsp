@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-gray elevation-4 bg-dark">
     <!-- Brand Logo -->
     <a href="/" class="brand-link text-center">
         <h3><span class="brand-text font-weight-light ">SI AKAD</span></h3>

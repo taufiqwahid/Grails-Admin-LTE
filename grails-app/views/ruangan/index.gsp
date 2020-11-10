@@ -29,8 +29,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Kode Ruangan</th>
-                                <th>Nama Ruangan</th>
-                                <th>Lantai</th>
+                                <th>Jurusan</th>
+                                <th>Matakuliah</th>
                                 <th class="text-center">Opsi</th>
 
                             </tr>
@@ -40,8 +40,9 @@
                                     <g:each in="${ruangan}" var="rgn">
                                             <td>${rgn.id}</td>
                                             <td>${rgn.kode}</td>
-                                            <td>${rgn.nama}</td>
-                                            <td>${rgn.lantai}</td>
+                                            <td>${rgn.jurusan.nama}</td>
+                                            <td>${rgn.matakuliah.nama}</td>
+
                                             <td class="text-center">
                                                 <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${rgn.id}">Update</g:link></div>
                                                 <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${rgn.id}">Hapus</g:link></div>

@@ -34,9 +34,13 @@
     <div class="login-logo">
         <a href="#"><b>Login</b></a>
     </div>
+
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
+            <g:if test="${flash.message}">
+                <div class="text-center text-red" role="status">${flash.message}</div><br/>
+            </g:if>
                 <g:form action="cekLogin" controller="login" method="post">
                 <div class="input-group mb-3">
                     <input name="email" type="email" class="form-control" placeholder="Email">
@@ -69,7 +73,7 @@
             <div class="social-auth-links text-center mb-3">
                 <div class="">
                     <button type="submit" class="btn btn-primary btn-block"></i>Sign In</button>
-                </div>
+                </div><br/>
                 <p>- OR -</p>
                     <g:link controller="register" action="index" class="btn btn-block btn-light">
                     Sign Up

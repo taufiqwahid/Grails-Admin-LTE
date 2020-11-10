@@ -27,12 +27,10 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th class="text-center">#</th>
                                 <th>Nama</th>
                                 <th>Bebas SKS</th>
                                 <th>Semester</th>
-                                <th>Dosen</th>
-                                <th>Ruangan</th>
                                 <th class="text-center">Opsi</th>
 
                             </tr>
@@ -40,12 +38,10 @@
                             <tbody>
                             <g:each in="${matkul}" var="mk">
                                 <tr>
-                                    <td>${mk.id}</td>
+                                    <td class="text-center">${mk.id}</td>
                                     <td>${mk.nama}</td>
                                     <td>${mk.sks}</td>
                                     <td>${mk.semester}</td>
-                                    <td>${mk.dosen}</td>
-                                    <td>${mk.ruangan}</td>
                                     <td class="text-center">
                                         <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${mk.id}">Update</g:link></div>
                                         <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mk.id}">Hapus</g:link></div>

@@ -26,12 +26,20 @@
                     <g:textField type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Ruangan"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Ruangan</label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Ruangan"/>
+                    <label for="exampleFormControlSelect1">Jurusan</label>
+                    <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                        <g:each in="${jurusan}" var="jrs">
+                            <option value="${jrs.nama}">${jrs.nama}</option>
+                        </g:each>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Lantai</label>
-                    <g:textField type="text" name="lantai" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Lantai"/>
+                    <label for="exampleFormControlSelect2">Mata Kuliah</label>
+                    <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
+                        <g:each in="${matkul}" var="mk">
+                            <option value="${mk.nama}">${mk.nama}</option>
+                        </g:each>
+                    </select>
                 </div>
             </div>
             <!-- /.card-body -->

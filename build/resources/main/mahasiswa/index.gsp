@@ -26,7 +26,7 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th class="text-center">#</th>
                                 <th>Nama</th>
                                 <th>NIM</th>
                                 <th>Alamat</th>
@@ -40,7 +40,7 @@
                             <tbody>
                             <g:each in="${mahasiswa}" var="mhs">
                             <tr>
-                                <td>${mhs.id}</td>
+                                <td class="text-center">${mhs.id}</td>
                                 <td>${mhs.nama}</td>
                                 <td>${mhs.nim}</td>
                                 <td>${mhs.alamat}</td>
@@ -49,9 +49,8 @@
                                 <td>${mhs.jurusan.nama}</td>
                                 <td class="text-center">
                                     <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${mhs.id}">Update</g:link></div>
-
                                     <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mhs.id}">Hapus</g:link></div>
-                                </td>mhs
+                                </td>
                             </tr>
 
                             </g:each>

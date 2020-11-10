@@ -33,15 +33,6 @@
                     <label for="exampleInputEmail1">Semester</label>
                     <g:textField type="text" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester" value="${matkul.semester}"/>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Dosen</label>
-                    <g:textField type="text" name="dosen" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Dosen" value="${matkul.dosen}"/>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Ruangan</label>
-                    <g:textField type="text" name="ruangan" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Ruangan" value="${matkul.ruangan}"/>
-                </div>
-
             </div>
             <!-- /.card-body -->
 

@@ -30,7 +30,8 @@
                                 <th>#</th>
                                 <th>Nama</th>
                                 <th>NIP</th>
-                                <th>Mata Kuliah</th>
+                                <th>Alamat</th>
+                                <th>Jurusan</th>
                                 <th class="text-center">Opsi</th>
 
                             </tr>
@@ -41,7 +42,8 @@
                                     <td>${dsn.id}</td>
                                     <td>${dsn.nama}</td>
                                     <td>${dsn.nip}</td>
-                                    <td>${dsn.matakuliah}</td>
+                                    <td>${dsn.alamat}</td>
+                                    <td>${dsn.jurusan.nama}</td>
                                     <td class="text-center">
                                         <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${dsn.id}">Update</g:link></div>
 

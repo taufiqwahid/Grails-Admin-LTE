@@ -7,11 +7,18 @@ class RuanganController {
         [ruangan: ruangan]
     }
 
-    def create(){}
+    def create(){
+        def matkul = Matakuliah.list()
+        def jurusan = Jurusan.list()
+        [matkul: matkul,jurusan: jurusan]
+    }
 
     def edit(){
         def ruangan = Ruangan.get(params.id)
-        [ruangan: ruangan]
+        def matkul = Matakuliah.list()
+        def jurusan = Jurusan.list()
+        [ruangan: ruangan, matkul: matkul,jurusan: jurusan]
+
     }
 
     def update(){
