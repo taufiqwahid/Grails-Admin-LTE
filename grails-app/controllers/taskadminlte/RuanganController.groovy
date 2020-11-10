@@ -30,7 +30,7 @@ class RuanganController {
 
     def save(){
         def ruangan = new Ruangan(params)
-        ruangan.save(failOnError: true)
+        ruangan.save flush: true, failOnError: true
         redirect action: 'index'
     }
     def delete(){

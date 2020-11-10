@@ -29,7 +29,7 @@
                     <label for="exampleFormControlSelect1">Jurusan</label>
                     <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
                         <g:each in="${jurusan}" var="jrs">
-                            <option value="${jrs.nama}">${jrs.nama}</option>
+                            <option value="${jrs.id}">${jrs.nama}</option>
                         </g:each>
                     </select>
                 </div>
@@ -37,7 +37,7 @@
                     <label for="exampleFormControlSelect2">Mata Kuliah</label>
                     <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
                         <g:each in="${matkul}" var="mk">
-                            <option value="${mk.nama}">${mk.nama}</option>
+                            <option value="${mk.id}">${mk.nama}</option>
                         </g:each>
                     </select>
                 </div>
