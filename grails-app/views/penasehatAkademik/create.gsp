@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect3">Jurusan</label>
-                    <select name="jurusan" class="form-control" id="exampleFormControlSelect3">
+                    <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect3">
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
                         </g:each>
@@ -48,7 +48,6 @@
 
             </div>
             <!-- /.card-body -->
-
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
                 <g:actionSubmit value="save" class="btn btn-primary"/>

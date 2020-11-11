@@ -36,8 +36,8 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
                                     <g:each in="${ruangan}" var="rgn">
+                                <tr>
                                             <td>${rgn.id}</td>
                                             <td>${rgn.kode}</td>
                                             <td>${rgn.jurusan.nama}</td>
@@ -47,8 +47,8 @@
                                                 <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${rgn.id}">Update</g:link></div>
                                                 <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${rgn.id}">Hapus</g:link></div>
                                             </td>
-                                    </g:each>
                                 </tr>
+                                    </g:each>
                             </tbody>
                         </tfoot>
                         </table>

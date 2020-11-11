@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Fakultas</label>
-                    <g:textField type="text" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas" value="${mahasiswa.fakultas}"/>
+                    <g:textField type="text" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas" value="${jurusan.fakultas}"/>
                 </div>
             </div>
             <!-- /.card-body -->

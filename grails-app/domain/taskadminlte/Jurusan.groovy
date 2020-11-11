@@ -1,7 +1,7 @@
 package taskadminlte
 
 class Jurusan {
-    String nama
+    String nama = 'TIDAK ADA JURUUSAN'
     String fakultas
 
     static constraints = {

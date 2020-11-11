@@ -37,9 +37,9 @@
                             </thead>
                             <tbody>
                             <g:each in="${penasehatAkademik}" var="pa">
-                                <tr>w
+                                <tr>
                                     <td class="text-center">${pa.id}</td>
-                                    <td>${pa.matakuliah.nama}</td>
+                                    <td>${pa.mahasiswa.nama}</td>
                                     <td>${pa.dosen.nama}</td>
                                     <td>${pa.tahunAkademik.priode}</td>
                                     <td class="text-center">

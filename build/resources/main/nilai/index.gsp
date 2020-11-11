@@ -33,20 +33,19 @@
                                 <th>Nilai UTS</th>
                                 <th>Nilai UAS</th>
                                 <th class="text-center">Opsi</th>
-                            </tr>
+                            </tr>n
                             </thead>
                             <tbody>
-                            <g:each in="${nilai}" var="nilai">
+                            <g:each in="${nilai}" var="n">
                                 <tr>
-                                    <td>${nilai.id}</td>
-                                    <td>${nilai.matakuliah.nama}</td>
-                                    <td>${nilai.nim}</td>
-                                    <td>${nilai.uts}</td>
-                                    <td>${nilai.uas}</td>
+                                    <td>${n.id}</td>
+                                    <td>${n.matakuliah.nama}</td>
+                                    <td>${n.nim}</td>
+                                    <td>${n.uts}</td>
+                                    <td>${n.uas}</td>
                                     <td class="text-center">
-                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${nilai.id}">Update</g:link></div>
-
-                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${nilai.id}">Hapus</g:link></div>
+                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${n.id}">Update</g:link></div>
+                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${n.id}">Hapus</g:link></div>
                                     </td>
                                 </tr>
                             </g:each>

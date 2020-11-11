@@ -11,7 +11,7 @@ class JurusanController {
 
     def edit(){
         def jurusan = Jurusan.get(params.id)
-        [mahasiswa: jurusan]
+        [jurusan: jurusan]
     }
 
     def update(){

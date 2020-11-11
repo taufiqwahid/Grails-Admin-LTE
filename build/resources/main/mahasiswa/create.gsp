@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tanggal Lahir</label>
-                    <g:textField type="text" name="tglLahir" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tanggal Lahir"/>
+                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tglLahir" class="form-control"  placeholder="Masukkan anggal Lahir">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">No Telepon</label>

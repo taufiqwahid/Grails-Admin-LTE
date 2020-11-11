@@ -14,7 +14,7 @@
 <div class="container">
   <div class="card card-primary">
     <div class="card-header">
-      <h3 class="card-title">Tambah Data Dosen</h3>
+      <h3 class="card-title">Tambah Data Nilai</h3>
     </div>
   <!-- /.card-header -->
   <!-- form start -->

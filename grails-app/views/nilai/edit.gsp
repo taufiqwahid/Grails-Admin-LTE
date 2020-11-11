@@ -14,7 +14,7 @@
 <div class="container">
     <div class="card card-success">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data Dosen</h3>
+            <h3 class="card-title">Update Nilai Mahasiswa</h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -26,6 +26,14 @@
                     <select name="matakuliah" class="form-control" id="exampleFormControlSelect1">
                         <g:each in="${matkul}" var="mk">
                             <option value="${mk.id}">${mk.nama}</option>
+                        </g:each>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">NIM Mahasiswa</label>
+                    <select name="nim" class="form-control" id="exampleFormControlSelect7">
+                        <g:each in="${mahasiswa}" var="mhs">
+                            <option value="${mhs.id}">${mhs.nim}</option>
                         </g:each>
                     </select>
                 </div>
