@@ -25,7 +25,7 @@ class JadwalController {
     }
     def edit(){
         def jadwal = Jadwal.get(params.id)
-        def mahasiswa = Mahasiswa.list()
+        def dosen = Dosen.list()
         def matkul = Matakuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()

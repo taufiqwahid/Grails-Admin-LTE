@@ -7,7 +7,9 @@ class JurusanController {
         [jurusan: jurusan]
     }
 
-    def create(){}
+    def create(){
+
+    }
 
     def edit(){
         def jurusan = Jurusan.get(params.id)
@@ -23,9 +25,14 @@ class JurusanController {
 
     def save(){
         def jurusan = new Jurusan(params)
+        if (jurusan.validate()){
+            jurusan.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Login Failed !"
+            redirect action: 'create'
+        }
 
-        jurusan.save flush:true, failOnError:true
-        redirect action: 'index'
     }
 
     def delete(){
@@ -33,4 +40,18 @@ class JurusanController {
         jurusan.delete flush: true, failOnError: true
         redirect action: 'index'
     }
+
+    def detailJurusan(){
+        def jurusan = Jurusan.get(params.id)
+        def mahasiswa = Mahasiswa.findAllByJurusan(jurusan)
+        println(jurusan)
+        [
+                mahasiswa: mahasiswa,
+                jurusan: jurusan
+        ]
+    }
+
+//        mencari data jurusan, filter jurusan yang sama pada data mahasiswa
+//        select mahasiswa where jurusan='jurusan'
+
 }

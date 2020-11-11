@@ -16,7 +16,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">Tabel Mata Kuliah</h2>
+                        <h2 class="card-title">Tabel Jadwal Kuliah</h2>
                         <g:link action="create">
                             <button class="btn btn-primary float-right">Tambah Data</button>
                         </g:link>

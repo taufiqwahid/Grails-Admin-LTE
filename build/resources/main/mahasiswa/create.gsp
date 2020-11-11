@@ -45,6 +45,7 @@
                 <div class="form-group">
                         <label for="exampleFormControlSelect1">Jurusan</label>
                         <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                            <option value="NULL">Pilih...</option>
                             <g:each in="${jurusan}" var="jrs">
                                 <option value="${jrs.id}">${jrs.nama}</option>
                             </g:each>

@@ -29,10 +29,16 @@
             </g:each>
           </select>
         </div>
+
         <div class="form-group">
-          <label for="exampleInputEmail1">NIM</label>
-          <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM"/>
+          <label for="exampleFormControlSelect1">NIM Mahasiswa</label>
+          <select name="nim" class="form-control" id="exampleFormControlSelect7">
+            <g:each in="${mahasiswa}" var="mhs">
+              <option value="${mhs.id}">${mhs.nim}</option>
+            </g:each>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="exampleInputEmail1">UTS</label>
           <g:textField type="text" name="uts" class="form-control" id="exampleInputEmail1" placeholder="Masukkan UTS "/>

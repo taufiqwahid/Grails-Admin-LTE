@@ -18,6 +18,8 @@
         </div>
     <!-- /.card-header -->
     <!-- form start -->
+<g:if test="${flash.message}">
+    <div class="alert alert-error" style="display: block">${flash.message}</div>
 
         <g:form controller="jurusan" action="save" method="POST">
             <div class="card-body">
@@ -37,6 +39,7 @@
             </div>
         </g:form>
     </div>
+</g:if>
 </div>
 
 %{--PENUTUP CONTENTNYA--}%

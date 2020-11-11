@@ -48,6 +48,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tahun Akademik</label>
                     <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect5">
+                        <option value="NULL">Pilih...</option>
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
                         </g:each>
@@ -55,6 +56,7 @@
                 </div><div class="form-group">
                     <label for="exampleFormControlSelect2">Ruangan</label>
                     <select name="ruangan" class="form-control" id="exampleFormControlSelect6">
+                        <option value="NULL">Pilih...</option>
                         <g:each in="${ruangan}" var="rgn">
                             <option value="${rgn.id}">${rgn.kode}</option>
                         </g:each>

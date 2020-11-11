@@ -30,7 +30,6 @@
                                 <th>#</th>
                                 <th>Nama Jurusan</th>
                                 <th>Fakultas</th>
-
                                 <th class="text-center">Opsi</th>
 
                             </tr>
@@ -39,7 +38,7 @@
                             <g:each in="${jurusan}" var="jrs">
                                 <tr>
                                     <td>${jrs.id}</td>
-                                    <td>${jrs.nama}</td>
+                                    <td><g:link action="detailJurusan" id="${jrs.id}">${jrs.nama}</g:link></td>
                                     <td>${jrs.fakultas}</td>
                                     <td class="text-center">
                                         <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${jrs.id}">Update</g:link></div>
