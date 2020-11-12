@@ -18,7 +18,7 @@
                     <div class="card-header">
                         <h2 class="card-title">Tabel Jadwal Kuliah</h2>
                         <g:link action="create">
-                            <button class="btn btn-primary float-right">Tambah Data</button>
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
                         </g:link>
 
                     </div>
@@ -49,8 +49,8 @@
                                     <td>${jdw.tahunAkademik.priode}</td>
                                     <td>${jdw.ruangan.kode}</td>
                                     <td class="text-center">
-                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${jdw.id}">Update</g:link></div>
-                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${jdw.id}">Hapus</g:link></div>
+                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${jdw.id}"><i class="far fa-edit"></i></g:link></div>
+                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${jdw.id}"><i class="far fa-trash-alt"></i></g:link></div>
                                     </td>
                                 </tr>
                             </g:each>

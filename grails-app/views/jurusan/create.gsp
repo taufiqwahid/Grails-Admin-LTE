@@ -19,7 +19,7 @@
     <!-- /.card-header -->
     <!-- form start -->
         <g:if test="${flash.message}">
-            <div class="text-center text-red" role="status">${flash.message}</div><br/>
+            <br/><div class="text-center text-red" role="status">${flash.message}</div>
         </g:if>
         <g:form controller="jurusan" action="save" method="POST">
             <div class="card-body">

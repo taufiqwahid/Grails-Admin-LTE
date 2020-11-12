@@ -18,7 +18,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Tabel Nilai Mahasiswa</h3>
                         <g:link action="create">
-                            <button class="btn btn-primary float-right">Tambah Data</button>
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
                         </g:link>
 
                     </div>
@@ -44,8 +44,8 @@
                                     <td>${n.uts}</td>
                                     <td>${n.uas}</td>
                                     <td class="text-center">
-                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${n.id}">Update</g:link></div>
-                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${n.id}">Hapus</g:link></div>
+                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${n.id}"><i class="far fa-edit"></i></g:link></div>
+                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${n.id}"><i class="far fa-trash-alt"></i></g:link></div>
                                     </td>
                                 </tr>
                             </g:each>

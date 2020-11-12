@@ -27,8 +27,13 @@ class MahasiswaController {
 
     def save(){
         def mahasiswa = new Mahasiswa(params)
-        mahasiswa.save flush:true, failOnError:true
-        redirect action: 'index'
+        if (mahasiswa.validate()){
+            mahasiswa.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def delete(){
         def mahasiswa = Mahasiswa.get(params.id)

@@ -19,9 +19,14 @@ class KrsController {
         ]
     }
     def save(){
-        def pa = new Krs(params)
-        pa.save flush:true , failOnError:true
-        redirect action:'index'
+        def krs = new Krs(params)
+        if (krs.validate()){
+            krs.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def edit(){
         def krs = Krs.get(params.id)

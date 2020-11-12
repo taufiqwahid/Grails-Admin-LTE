@@ -30,8 +30,13 @@ class RuanganController {
 
     def save(){
         def ruangan = new Ruangan(params)
-        ruangan.save flush: true, failOnError: true
-        redirect action: 'index'
+        if (ruangan.validate()){
+            ruangan.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def delete(){
         def ruangan = Ruangan.get(params.id)

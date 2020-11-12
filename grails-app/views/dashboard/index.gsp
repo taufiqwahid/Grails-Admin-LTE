@@ -24,6 +24,7 @@
                 </div>
                 <div class="icon">
                     <i class="ion ion-user"></i>
+                    <i class="fa fa-coffee"></i>
                 </div>
                 <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>

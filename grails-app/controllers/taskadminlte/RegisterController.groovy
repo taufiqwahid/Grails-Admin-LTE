@@ -7,7 +7,12 @@ class RegisterController {
     def save(){
         def register = new Akun(params)
         println(register)
-        register.save flush:true, failOnError:true
-        redirect controller:'login', action: 'index'
+        if (register.validate()){
+            register.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
 }

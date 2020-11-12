@@ -18,8 +18,13 @@ class PenasehatAkademikController {
     }
     def save(){
         def pa = new PenasehatAkademik(params)
-        pa.save flush:true , failOnError:true
-        redirect action:'index'
+        if (pa.validate()){
+            pa.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def edit(){
         def penasehatAkademik = PenasehatAkademik.get(params.id)

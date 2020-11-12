@@ -1,8 +1,17 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-gray elevation-4 bg-dark">
     <!-- Brand Logo -->
-    <a href="/" class="brand-link text-center">
-        <h3><span class="brand-text font-weight-light ">SI AKAD</span></h3>
+    <a href="/dashboard/" class="brand-link text-center">
+%{--    <img src="" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"--}%
+%{--         style="opacity: .8">--}%
+
+%{--    <g:img uri="" class="brand-image img-circle elevation-3" style="opacity: .8"/>--}%
+    <img src="${resource(dir: 'images', file: 'logo_siakad.png')}" alt="Grails" class="text-center" style="width: 60px"/>
+   <div id="titleSidebar" class="brand-text font-weight-light">Sistem Akademik</div>
+    %{--    <div>--}%
+%{--        <i class="fab fa-stripe-s"></i>--}%
+%{--        <i class="fab fa-artstation"></i>--}%
+%{--    </div>  --}%
     </a>
 
     <!-- Sidebar -->
@@ -14,24 +23,24 @@
                with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="/mahasiswa" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Mahasiswa
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="/dosen" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-user-graduate"></i>
                         <p>
                             Dosen
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/mahasiswa" class="nav-link">
+                       <i class="fa fa-users"></i>
+                        <p>
+                            Mahasiswa
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/mataKuliah" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-list-alt"></i>
                         <p>
                             Matakuliah
                         </p>
@@ -39,31 +48,16 @@
                 </li>
                 <li class="nav-item">
                     <a href="/ruangan" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-laptop-house"></i>
                         <p>
                             Ruangan
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/akun" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Akun
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/jadwal" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Jadwal
-                        </p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="/jurusan" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-university"></i>
                         <p>
                             Jurusan
                         </p>
@@ -71,36 +65,53 @@
                 </li>
                 <li class="nav-item">
                     <a href="/krs" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-book-open"></i>
                         <p>
                             KRS
                         </p>
                     </a>
                 </li><li class="nav-item">
                     <a href="/nilai" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-poll"></i>
                         <p>
                             Nilai
                         </p>
                     </a>
-                </li><li class="nav-item">
+                </li>
+                <li class="nav-item">
+                    <a href="/jadwal" class="nav-link align-bottom">
+                        <i class="fa fa-calendar-alt"></i>
+                        <p>
+                            Jadwal
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/penasehatAkademik" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa fa-user-shield"></i>
                         <p>
                             Penasehat Akademik
                         </p>
                     </a>
                 </li><li class="nav-item">
                     <a href="/tahunAkademik" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-calendar-week"></i>
                         <p>
                             Tahun Akademik
                         </p>
                     </a>
                 </li>
-                <li class="nav-item btn-danger">
+                <li class="nav-item">
+                    <a href="/akun" class="nav-link align-bottom">
+                        <i class="fa fa-user"></i>
+                        <p>
+                            Akun
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item btn-danger rounded">
                     <a href="/login" class="nav-link align-bottom">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-sign-out-alt"></i>
                         <p>
                             Logout
                         </p>

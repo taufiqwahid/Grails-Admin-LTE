@@ -18,7 +18,9 @@
         </div>
     <!-- /.card-header -->
     <!-- form start -->
-
+        <g:if test="${flash.message}">
+            <div class="text-center text-red" role="status">${flash.message}</div><br/>
+        </g:if>
         <br><br>
         <div class="container">
             <div class="container">

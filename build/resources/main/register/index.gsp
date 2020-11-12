@@ -35,6 +35,9 @@
         <a href="#"><b>Sign Up</b></a>
     </div>
     <!-- /.login-logo -->
+    <g:if test="${flash.message}">
+        <div class="text-center text-red" role="status">${flash.message}</div><br/>
+    </g:if>
     <div class="card">
         <div class="card-body login-card-body">
             <g:form controller="register" action="save" method="post">

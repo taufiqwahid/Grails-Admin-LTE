@@ -20,8 +20,13 @@ class JadwalController {
     }
     def save(){
         def pa = new Jadwal(params)
-        pa.save flush:true , failOnError:true
-        redirect action:'index'
+        if (pa.validate()){
+            pa.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def edit(){
         def jadwal = Jadwal.get(params.id)

@@ -19,7 +19,9 @@
             </div>
         <!-- /.card-header -->
         <!-- form start -->
-
+            <g:if test="${flash.message}">
+                <div class="text-center text-red" role="status">${flash.message}</div><br/>
+            </g:if>
             <g:form controller="akun" action="save" method="POST">
                 <div class="card-body">
                     <div class="form-group">

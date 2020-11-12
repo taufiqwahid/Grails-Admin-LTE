@@ -11,8 +11,13 @@ class TahunAkademikController {
 
     def save(){
         def tahun = new TahunAkademik(params)
-        tahun.save flush:true, failOnError:true
-        redirect action: 'index'
+        if (tahun.validate()){
+            tahun.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
 
     def edit(){

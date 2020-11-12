@@ -29,7 +29,7 @@ class JurusanController {
             jurusan.save flush:true, failOnError:true
             redirect action: 'index'
         }else {
-            flash.message =  "Login Failed !"
+            flash.message =  "Pastikan inputan formnya terisi semua !"
             redirect action: 'create'
         }
 

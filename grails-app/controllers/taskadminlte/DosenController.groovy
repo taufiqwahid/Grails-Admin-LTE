@@ -27,8 +27,13 @@ class DosenController {
 
     def save(){
         def dosen = new Dosen(params)
-        dosen.save flush:true, failOnError:true
-        redirect action: 'index'
+        if (dosen.validate()){
+            dosen.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            redirect action: 'create'
+        }
     }
     def delete(){
         def dosen = Dosen.get(params.id)
