@@ -18,14 +18,13 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-
         <br><br>
         <div class="container">
             <div class="container">
-                <g:form controller="tahunAkademik" action="save" method="POST" class="form-inline">
+                <g:form controller="tahunAkademik" action="update" method="POST" class="form-inline">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tahun Akademik Priode</label>
                     <select name="priode" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                        <option selected>${tahun.priode}</option>
+                        <option disabled value="${tahun.id}" selected>${tahun.priode}</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>

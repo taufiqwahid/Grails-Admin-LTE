@@ -14,18 +14,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>Dashboard</title>
-
-    <!-- Font Awesome Icons -->
-    %{--    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">--}%
-    <asset:stylesheet src="all.min.css"/>
     <!-- IonIcons -->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-%{--    <asset:link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>--}%
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- Theme style -->
-    %{--    <link rel="stylesheet" href="dist/css/adminlte.min.css">--}%
     <asset:stylesheet src="adminlte.min.css"/>
     <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-<asset:javascript src="custom.js"/>
-%{--    <asset:stylesheet href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"/>--}%
+    <asset:javascript src="custom.js"/>
+    <asset:stylesheet href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
 </head>

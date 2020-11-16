@@ -19,7 +19,15 @@
     <!-- /.card-header -->
     <!-- form start -->
         <g:if test="${flash.message}">
-            <br/><div class="text-center text-red" role="status">${flash.message}</div>
+        %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
+            <div class="container">
+                <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
+                    <strong>Warning</strong> ${flash.message}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
         </g:if>
         <br><br>
         <div class="container">

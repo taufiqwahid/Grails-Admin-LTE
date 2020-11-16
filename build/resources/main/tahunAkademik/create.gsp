@@ -19,7 +19,15 @@
     <!-- /.card-header -->
     <!-- form start -->
         <g:if test="${flash.message}">
-            <div class="text-center text-red" role="status">${flash.message}</div><br/>
+        %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
+            <div class="container">
+                <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
+                    <strong>Warning</strong> ${flash.message}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
         </g:if>
         <br><br>
         <div class="container">
@@ -27,7 +35,7 @@
                 <g:form controller="tahunAkademik" action="save" method="POST" class="form-inline">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tahun Akademik Priode</label>
                     <select name="priode" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                        <option selected>Tahun...</option>
+                        <option selected disabled>Tahun...</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>

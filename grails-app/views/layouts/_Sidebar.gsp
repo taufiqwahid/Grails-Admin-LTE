@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-gray elevation-4 bg-dark">
+<aside class="main-sidebar  bg-navy elevation-4 bg-dark">
     <!-- Brand Logo -->
     <a href="/dashboard/" class="brand-link text-center">
 %{--    <img src="" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"--}%
@@ -23,7 +23,7 @@
                with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="/dosen" class="nav-link">
+                    <a href="/dosen" class="nav-link text-light">
                         <i class="fa fa-user-graduate"></i>
                         <p>
                             Dosen
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/mahasiswa" class="nav-link">
+                    <a href="/mahasiswa" class="nav-link text-light">
                        <i class="fa fa-users"></i>
                         <p>
                             Mahasiswa
@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/mataKuliah" class="nav-link">
+                    <a href="/mataKuliah" class="nav-link text-light">
                         <i class="fa fa-list-alt"></i>
                         <p>
                             Matakuliah
@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/ruangan" class="nav-link">
+                    <a href="/ruangan" class="nav-link text-light">
                         <i class="fa fa-laptop-house"></i>
                         <p>
                             Ruangan
@@ -56,7 +56,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/jurusan" class="nav-link align-bottom">
+                    <a href="/jurusan" class="nav-link align-bottom text-light">
                         <i class="fa fa-university"></i>
                         <p>
                             Jurusan
@@ -64,14 +64,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/krs" class="nav-link align-bottom">
+                    <a href="/krs" class="nav-link align-bottom text-light">
                         <i class="fas fa-book-open"></i>
                         <p>
                             KRS
                         </p>
                     </a>
                 </li><li class="nav-item">
-                    <a href="/nilai" class="nav-link align-bottom">
+                    <a href="/nilai" class="nav-link align-bottom text-light">
                         <i class="fa fa-poll"></i>
                         <p>
                             Nilai
@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jadwal" class="nav-link align-bottom">
+                    <a href="/jadwal" class="nav-link align-bottom text-light">
                         <i class="fa fa-calendar-alt"></i>
                         <p>
                             Jadwal
@@ -87,14 +87,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/penasehatAkademik" class="nav-link align-bottom">
+                    <a href="/penasehatAkademik" class="nav-link align-bottom text-light">
                         <i class="fa fa-user-shield"></i>
                         <p>
                             Penasehat Akademik
                         </p>
                     </a>
-                </li><li class="nav-item">
-                    <a href="/tahunAkademik" class="nav-link align-bottom">
+                </li>
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+
+                <li class="nav-item">
+                    <a href="/tahunAkademik" class="nav-link align-bottom text-light">
                         <i class="fas fa-calendar-week"></i>
                         <p>
                             Tahun Akademik
@@ -102,15 +105,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/akun" class="nav-link align-bottom">
+                    <a href="/akun" class="nav-link align-bottom text-light">
                         <i class="fa fa-user"></i>
                         <p>
                             Akun
                         </p>
                     </a>
                 </li>
+            </sec:ifAllGranted>
                 <li class="nav-item btn-danger rounded">
-                    <a href="/login" class="nav-link align-bottom">
+                    <a href="/logout" class="nav-link align-bottom text-light">
                         <i class="fas fa-sign-out-alt"></i>
                         <p>
                             Logout

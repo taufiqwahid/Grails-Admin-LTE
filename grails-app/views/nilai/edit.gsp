@@ -23,7 +23,8 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Mata Kuliah</label>
-                    <select name="matakuliah" class="form-control" id="exampleFormControlSelect1">
+                    <select name="matakuliah" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option value="${nilai.matakuliah.id}">${nilai.matakuliah.nama}</option>
                         <g:each in="${matkul}" var="mk">
                             <option value="${mk.id}">${mk.nama}</option>
                         </g:each>
@@ -31,23 +32,20 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">NIM Mahasiswa</label>
-                    <select name="nim" class="form-control" id="exampleFormControlSelect7">
+                    <select name="nim" required="" class="form-control" id="exampleFormControlSelect7">
+                        <option selected disabled value="${mahasiswa.id}">${nilai.nim}</option>
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nim}</option>
                         </g:each>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">NIM</label>
-                    <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen" value="${nilai.nim}"/>
-                </div>
-                <div class="form-group">
                     <label for="exampleInputEmail1">UTS</label>
-                    <g:textField type="text" name="uts" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nilai UTS" value="${nilai.uts}"/>
+                    <g:textField type="text" required="" name="uts" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nilai UTS" value="${nilai.uts}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">UAS</label>
-                    <g:textField type="text" name="uas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nilai UAS" value="${nilai.uas}"/>
+                    <g:textField type="text" required="" name="uas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nilai UAS" value="${nilai.uas}"/>
                 </div>
             </div>
             <!-- /.card-body -->

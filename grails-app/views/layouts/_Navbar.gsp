@@ -9,7 +9,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/adminLTE/index" class="nav-link"><i class="fa fa-home"></i> Home</a>
+            <a href="/dashboard" class="nav-link"><i class="fa fa-home"></i> Home</a>
         </li>
     </ul>
 

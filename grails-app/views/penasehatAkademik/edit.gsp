@@ -23,8 +23,8 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Mahasiswa</label>
-                    <select name="mahasiswa" class="form-control" id="exampleFormControlSelect1">
-                        <option value="${penasehatAkademik.id}">${penasehatAkademik.mahasiswa.nama}...</option>
+                    <select name="mahasiswa" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option selected disabled value="${penasehatAkademik.id}">${penasehatAkademik.mahasiswa.nama}...</option>
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nama}</option>
                         </g:each>
@@ -32,8 +32,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Dosen</label>
-                    <select name="dosen" class="form-control" id="exampleFormControlSelect2">
-                        <option value="${penasehatAkademik.id}">${penasehatAkademik.dosen.nama}...</option>
+                    <select name="dosen" required="" class="form-control" id="exampleFormControlSelect2">
+                        <option selected disabled value="${penasehatAkademik.id}">${penasehatAkademik.dosen.nama}...</option>
                         <g:each in="${dosen}" var="dsn">
                             <option value="${dsn.id}">${dsn.nama}</option>
                         </g:each>
@@ -41,8 +41,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect3">Jurusan</label>
-                    <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect3">
-                        <option value="${penasehatAkademik.id}">${penasehatAkademik.tahunAkademik.priode}...</option>
+                    <select name="tahunAkademik" required="" class="form-control" id="exampleFormControlSelect3">
+                        <option selected disabled value="${penasehatAkademik.id}">${penasehatAkademik.tahunAkademik.priode}...</option>
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
                         </g:each>

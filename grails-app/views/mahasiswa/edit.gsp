@@ -23,27 +23,28 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama</label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${mahasiswa.nama}"/>
+                    <g:textField type="text"  required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${mahasiswa.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">NIM</label>
-                    <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM" value="${mahasiswa.nim}"/>
+                    <g:textField type="text" required="" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM" value="${mahasiswa.nim}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
-                    <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat" value="${mahasiswa.alamat}"/>
+                    <g:textField type="text" required="" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat" value="${mahasiswa.alamat}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tanggal Lahir</label>
-                    <g:textField type="text" name="tglLahir" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tanggal Lahir" value="${mahasiswa.tglLahir}"/>
+                    <g:textField type="text"  required="" name="tglLahir" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tanggal Lahir" value="${mahasiswa.tglLahir}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">No Telepon</label>
-                    <g:textField type="text" name="noTelp" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No Telepon " value="${mahasiswa.noTelp}"/>
+                    <g:textField type="text" required="" name="noTelp" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No Telepon " value="${mahasiswa.noTelp}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Jurusan</label>
-                    <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                    <select name="jurusan" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option value="${mahasiswa.jurusan.id}">${mahasiswa.jurusan.nama}</option>
                         <g:each in="${jurusan}" var="jrs">
                             <option value="${jrs.id}">${jrs.nama}</option>
                         </g:each>

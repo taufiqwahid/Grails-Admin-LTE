@@ -23,14 +23,26 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Jurusan</label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${jurusan.nama}"/>
+                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${jurusan.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Fakultas</label>
-                    <g:textField type="text" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas" value="${jurusan.fakultas}"/>
+                    <g:textField type="text" required="" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas" value="${jurusan.fakultas}"/>
                 </div>
             </div>
             <!-- /.card-body -->
+            <g:if test="${flash.message}">
+            %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
+                <div class="container">
+                    <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
+                        <strong>Warning</strong> ${flash.message}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </g:if>
+
             <div class="card-footer float-right">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
                 <g:actionSubmit value="Update" class="btn btn-success"/>

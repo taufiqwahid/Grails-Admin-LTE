@@ -23,19 +23,20 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama</label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${dosen.nama}"/>
+                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${dosen.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">NIP</label>
-                    <g:textField type="text" name="nip" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen" value="${dosen.nip}"/>
+                    <g:textField type="text" required="" name="nip" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen" value="${dosen.nip}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
-                    <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat" value="${dosen.alamat}"/>
+                    <g:textField type="text" required="" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat" value="${dosen.alamat}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Jurusan</label>
-                    <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                    <select name="jurusan" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option selected disabled value="${dosen.id}">${dosen.jurusan.nama}</option>
                         <g:each in="${jurusan}" var="jrs">
                             <option value="${jrs.id}">${jrs.nama}</option>
                         </g:each>

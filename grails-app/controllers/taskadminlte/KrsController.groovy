@@ -1,5 +1,9 @@
 package taskadminlte
 
+import grails.plugin.springsecurity.annotation.Secured
+
+@Secured(['ROLE_ADMIN','ROLE_USER'])
+
 class KrsController {
 
     def index() {
@@ -28,6 +32,8 @@ class KrsController {
             redirect action: 'create'
         }
     }
+    @Secured(['ROLE_ADMIN'])
+
     def edit(){
         def krs = Krs.get(params.id)
         def mahasiswa = Mahasiswa.list()
@@ -44,8 +50,13 @@ class KrsController {
     def update(){
         def krs = Krs.get(params.id)
         krs.properties = params
-        krs.save flush:true, failOnError:true
-        redirect action: 'index'
+        if (krs.validate()){
+            krs.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
+            redirect action: 'index'
+        }
     }
     def delete(){
         def krs = Krs.get(params.id)

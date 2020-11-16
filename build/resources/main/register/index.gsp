@@ -36,7 +36,7 @@
     </div>
     <!-- /.login-logo -->
     <g:if test="${flash.message}">
-        <div class="text-center text-red" role="status">${flash.message}</div><br/>
+        <br/><div class="text-center text-red" role="status">${flash.message}</div>
     </g:if>
     <div class="card">
         <div class="card-body login-card-body">

@@ -1,5 +1,9 @@
 package taskadminlte
 
+import grails.plugin.springsecurity.annotation.Secured
+
+@Secured(['ROLE_ADMIN','ROLE_USER'])
+
 class NilaiController {
     def index(){
         def nilai = Nilai.list()
@@ -11,19 +15,25 @@ class NilaiController {
         def mahasiswa = Mahasiswa.list()
         [matkul: matkul,mahasiswa:mahasiswa]
     }
+    @Secured(['ROLE_ADMIN'])
 
     def edit(){
         def nilai = Nilai.get(params.id)
         def matkul = Matakuliah.list()
         def mahasiswa = Mahasiswa.list()
-        [nilai: nilai, matkul: matkul,mahasiswa: mahasiswa]
+        [nilai: nilai, matkul: matkul, mahasiswa: mahasiswa]
     }
 
     def update(){
         def nilai = Nilai.get(params.id)
         nilai.properties = params
-        nilai.save flush:true, failOnError:true
-        redirect action: 'index'
+        if (nilai.validate()){
+            nilai.save flush:true, failOnError:true
+            redirect action: 'index'
+        }else {
+            flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
+            redirect action: 'index'
+        }
     }
 
     def save(){

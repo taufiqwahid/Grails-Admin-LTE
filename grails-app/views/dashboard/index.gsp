@@ -12,21 +12,24 @@
 %{--CONTENTNYA--}%
 
 <div class="container">
+    <sec:ifLoggedIn>
+        <a href="/logout">logout</a>
+        <a href="/login">login</a>
+    </sec:ifLoggedIn>
+%{--    111111111--}%
     <!-- Small boxes (Stat box) -->
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
-                <div class="inner">
-                    <h3>Data Akun</h3>
-
-                    <p></p>
+                <div class="inner text-navy">
+                    <h5>Dosen</h5>
+                    <h3>${Dosen}</h3>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-user"></i>
-                    <i class="fa fa-coffee"></i>
+                    <i class="fa fa-user-graduate"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <g:link controller="dosen" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
         <!-- ./col -->
@@ -34,44 +37,177 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                    <p>Bounce Rate</p>
+                    <h5>Mahasiswa</h5>
+                    <h3>${Mahasiswa}</h3>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
+                    <i class="fa fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <g:link controller="mahasiswa" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+    </div>
+        </div>
+        <!-- ./col -->
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+            <div class="inner text-navy">
+                <h5>Matakuliah</h5>
+
+                <h3>${Matakuliah}</h3>
+            </div>
+            <div class="icon">
+                <i class="fa fa-laptop-house"></i>
+            </div>
+            <g:link controller="ruangan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        </div>
+    </div>
+    <!-- ./col -->
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <h5>Ruangan</h5>
+
+                    <h3>${Ruangan}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-laptop-house"></i>
+                </div>
+        <g:link controller="ruangan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+    </div>
+    <!-- /.row -->
+
+
+%{--    222222222--}%
+
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h5>Jurusan</h5>
+
+                    <h3>${Jurusan}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-university"></i>
+                </div>
+            <g:link controller="jurusan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-secondary">
                 <div class="inner">
-                    <h3>44</h3>
+                    <h5>KRS</h5>
 
-                    <p>User Registrations</p>
+                    <h3>${Krs}</h3>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-person-add"></i>
+                    <i class="fas fa-book-open"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <g:link controller="krs" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h5>Nilai</h5>
+
+                    <h3>${Nilai}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-poll"></i>
+                </div>
+        <g:link controller="nilai" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h5>Jadwal</h5>
+
+                    <h3>${Jadwal}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+        <g:link controller="jadwal" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+    </div>
+    <!-- /.row -->
+
+%{--    333333333--}%
+
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+                <div class="inner text-navy">
+                    <h5>Penasehat Akademik</h5>
+
+                    <h3>${PenasehatAkademik}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-user-shield"></i>
+                </div>
+            <g:link controller="penasehatAkademik" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h5>Tahun Akademik</h5>
+                    <h3>${TahunAkademik}</h3>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-calendar-week"></i>
+                </div>
+        <g:link controller="tahunAkademik" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
-                <div class="inner">
-                    <h3>65</h3>
+                <div class="inner text-navy">
+                    <h5>Data Akun</h5>
 
-                    <p>Unique Visitors</p>
+                    <h3>${Akun}</h3>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
+                    <i class="fa fa-user"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <g:link controller="akun" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h5>LOGOUT</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+        <g:link controller="login" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
         <!-- ./col -->

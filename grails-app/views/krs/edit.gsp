@@ -23,8 +23,8 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Mahasiswa</label>
-                    <select name="mahasiswa" class="form-control" id="exampleFormControlSelect1">
-                        <option value="${krs.mahasiswa.id}">${krs.mahasiswa.nama}...</option>
+                    <select name="mahasiswa" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option disabled selected  value="${krs.mahasiswa.id}">${krs.mahasiswa.nama}</option>
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nama}</option>
                         </g:each>
@@ -32,8 +32,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Mata Kuliah</label>
-                    <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
-                        <option value="${krs.matakuliah.id}">${krs.matakuliah.nama}...</option>
+                    <select name="matakuliah" required="" class="form-control" id="exampleFormControlSelect2">
+                        <option  disabled selected value="${krs.matakuliah.id}">${krs.matakuliah.nama}</option>
                         <g:each in="${matkul}" var="mk">
                             <option value="${mk.id}">${mk.nama}</option>
                         </g:each>
@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect3">Tahun Akademik</label>
                     <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect3">
-                        <option value="${krs.tahunAkademik.id}">${krs.tahunAkademik.priode}...</option>
+                        <option disabled selected value="${krs.tahunAkademik.id}">${krs.tahunAkademik.priode}</option>
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
                         </g:each>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect4">Penasehat Akademik</label>
-                    <select name="penasehatAkademik" class="form-control" id="exampleFormControlSelect4">
-                        <option value="${krs.penasehatAkademik.dosen.id}">${krs.penasehatAkademik.dosen.nama}...</option>
+                    <select name="penasehatAkademik" required="" class="form-control" id="exampleFormControlSelect4">
+                        <option selected disabled value="${krs.penasehatAkademik.dosen.id}">${krs.penasehatAkademik.dosen.nama}...</option>
                         <g:each in="${penasehatAkademik}" var="pa">
                             <option value="${pa.dosen.id}">${pa.dosen.nama}</option>
                         </g:each>

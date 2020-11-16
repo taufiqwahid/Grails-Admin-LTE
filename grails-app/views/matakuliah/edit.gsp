@@ -23,15 +23,15 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Matakuliah</label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah" value="${matkul.nama}"/>
+                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah" value="${matkul.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">SKS</label>
-                    <g:textField type="number" name="sks" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jumlah SKS" value="${matkul.sks}"/>
+                    <g:textField type="number" required="" name="sks" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jumlah SKS" value="${matkul.sks}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Semester</label>
-                    <g:textField type="text" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester" value="${matkul.semester}"/>
+                    <g:textField type="text" required="" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester" value="${matkul.semester}"/>
                 </div>
             </div>
             <!-- /.card-body -->

@@ -23,21 +23,23 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Kode Ruangan</label>
-                    <g:textField type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Ruangan" value="${ruangan.kode}"/>
+                    <g:textField  required="" type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Ruangan" value="${ruangan.kode}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Jurusan</label>
-                    <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                    <select name="jurusan" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option value="${ruangan.jurusan.id}">${ruangan.jurusan.nama}</option>
                         <g:each in="${jurusan}" var="jrs">
-                            <option value="${jrs.nama}">${jrs.nama}</option>
+                            <option value="${jrs.id}">${jrs.nama}</option>
                         </g:each>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Mata Kuliah</label>
-                    <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
+                    <select required="" name="matakuliah" class="form-control" id="exampleFormControlSelect2">
+                        <option value="${ruangan.matakuliah.id}">${ruangan.matakuliah.nama}</option>
                         <g:each in="${matkul}" var="mk">
-                            <option value="${mk.nama}">${mk.nama}</option>
+                            <option value="${mk.id}">${mk.nama}</option>
                         </g:each>
                     </select>
                 </div>

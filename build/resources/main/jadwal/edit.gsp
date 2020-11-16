@@ -22,7 +22,8 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Nama Dosen</label>
-                    <select name="dosen" class="form-control" id="exampleFormControlSelect1">
+                    <select name="dosen" required="" class="form-control" id="exampleFormControlSelect1">
+                        <option disabled selected value="${jadwal.id}">${jadwal.dosen.nama}</option>
                         <g:each in="${dosen}" var="dsn">
                             <option value="${dsn.id}">${dsn.nama}</option>
                         </g:each>
@@ -30,8 +31,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Mata Kuliah</label>
-                    <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
-                        <option value="${jadwal.id}">${jadwal.matakuliah.nama}</option>
+                    <select name="matakuliah" required="" class="form-control" id="exampleFormControlSelect2">
+                        <option disabled selected value="${jadwal.id}">${jadwal.matakuliah.nama}</option>
                         <g:each in="${matkul}" var="mk">
                             <option value="${mk.id}">${mk.nama}</option>
                         </g:each>
@@ -39,24 +40,24 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Hari</label>
-                    <input value="${jadwal.hari}"  required type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="Masukkan Hari">
+                    <input value="${jadwal.hari}"  required="" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="Masukkan Hari">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Jam</label>
-                    <input required value="${jadwal.jam}" type="time" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="Masukkan Hari">
+                    <input required value="${jadwal.jam}" required="" type="time" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="Masukkan Hari">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tahun Akademik</label>
-                    <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect5">
-                        <option value="${jadwal.tahunAkademikId}">${jadwal.tahunAkademik.priode}</option>
+                    <select name="tahunAkademik" required="" class="form-control" id="exampleFormControlSelect5">
+                        <option disabled  selected value="${jadwal.tahunAkademikId}">${jadwal.tahunAkademik.priode}</option>
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
                         </g:each>
                     </select>
                 </div><div class="form-group">
                 <label for="exampleFormControlSelect2">Ruangan</label>
-                <select name="ruangan" class="form-control" id="exampleFormControlSelect6">
-                    <option value="${jadwal.ruanganId}">${jadwal.ruangan.kode}</option>
+                <select name="ruangan"required="" class="form-control" id="exampleFormControlSelect6">
+                    <option disabled selected value="${jadwal.ruanganId}">${jadwal.ruangan.kode}</option>
                     <g:each in="${ruangan}" var="rgn">
                         <option value="${rgn.id}">${rgn.kode}</option>
                     </g:each>
