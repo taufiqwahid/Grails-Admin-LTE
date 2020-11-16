@@ -168,6 +168,7 @@
             <g:link controller="penasehatAkademik" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
+    <sec:ifAllGranted roles="ROLE_ADMIN">
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -198,6 +199,7 @@
             </div>
         </div>
         <!-- ./col -->
+    </sec:ifAllGranted>
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">

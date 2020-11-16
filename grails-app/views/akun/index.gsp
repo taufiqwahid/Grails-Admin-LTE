@@ -9,7 +9,6 @@
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
