@@ -9,8 +9,28 @@ class UrlMappings {
             }
         }
 
+
         "/"(controller: 'dashboard')
+//        "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
+
+        name langDe :'/de'{
+            controller = 'dashboard'
+            action = 'index'
+        }
+
+        name langIn : '/in'{
+            controller = 'dashboard'
+            action = 'index'
+        }
+
+        '/de' (controller: 'dashboard', action: 'index'){
+            lang = "de"
+        }
+        '/in' (controller: 'dashboard', action: 'index'){
+            lang = 'in'
+        }
+
     }
 }

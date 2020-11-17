@@ -2,17 +2,23 @@ package taskadminlte
 
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(['ROLE_ADMIN','ROLE_USER'])
+@Secured(['permitAll'])
 class RegisterController {
 
     def index() {
     }
+
     def save(){
-        def register = new Akun(params)
-        println(register)
-        if (register.validate()){
-            register.save flush:true, failOnError:true
+        def user = new User(params)
+        if (user.validate()){
+
+        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
+            user.save flush:true, failOnError:true
+        if (!user.authorities.contains(userRole)){
+            UserRole.create(user,userRole,true)
+        }
             redirect action: 'index'
+
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
             redirect action: 'create'

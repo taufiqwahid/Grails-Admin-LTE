@@ -27,15 +27,15 @@
         <div class="card-body login-card-body">
                 <g:form action="authenticate" method="post">
                 <div class="input-group mb-3">
-                    <input name="username" type="text" class="form-control" placeholder="Username">
+                    <input name="username" type="text" class="form-control" placeholder="Username" required>
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fa fa-envelope"></span>
+                            <span class="fa fa-user"></span>
                         </div>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input name="password" type="password" class="form-control" placeholder="Password">
+                    <input name="password" type="password" class="form-control" placeholder="Password" required>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fa fa-lock"></span>
@@ -59,7 +59,8 @@
                     <g:actionSubmit value="Sign In" class="btn btn-primary btn-block"/>
                 </div><br/>
                 <p>- OR -</p>
-                    <g:actionSubmit value="Sign Out" class="btn btn-light btn-block"/>
+                <g:link controller="register" action="index" class="btn btn-light btn-block">Sign Out</g:link>
+
             </div>
                 </g:form>
             <!-- /.col -->
