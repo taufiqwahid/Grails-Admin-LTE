@@ -16,9 +16,18 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
+        <div class="image">
+%{--            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">--}%
+            <i class="fa fa-user-astronaut fa-2x"></i>
+        </div>
+        <div class="info">
+            <a href="#" class="d-block text-bold"><sec:username/></a>
+        </div>
+    </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" id="linkActive" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
@@ -70,7 +79,8 @@
                             KRS
                         </p>
                     </a>
-                </li><li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a href="/nilai" class="nav-link align-bottom text-light">
                         <i class="fa fa-poll"></i>
                         <p>
@@ -93,7 +103,10 @@
                             Penasehat Akademik
                         </p>
                     </a>
-                </li><li class="nav-item">
+                </li>
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+
+                <li class="nav-item">
                     <a href="/tahunAkademik" class="nav-link align-bottom text-light">
                         <i class="fas fa-calendar-week"></i>
                         <p>
@@ -109,6 +122,7 @@
                         </p>
                     </a>
                 </li>
+            </sec:ifAllGranted>
                 <li class="nav-item btn-danger rounded">
                     <a href="/logout" class="nav-link align-bottom text-light">
                         <i class="fas fa-sign-out-alt"></i>
@@ -128,14 +142,14 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
+                <h1 class="text-navy text-center text-bold">Universitas Apalah</h1>
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Dashboard Super Admin</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><g:link controller="dashboard">Dashboard</g:link> </li>
+                            <li class="breadcrumb-item active text-bold">${controllerName}</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->

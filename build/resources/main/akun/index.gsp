@@ -9,7 +9,6 @@
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
@@ -29,10 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Tabel Data Akun</h3>
-                        <g:link action="create">
+<sec:ifAllGranted roles="ROLE_ADMIN">
+
+    <g:link action="create">
                             <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
                         </g:link>
-
+</sec:ifAllGranted>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -44,7 +45,9 @@
                                 <th>Emal</th>
                                 <th>Password</th>
                                 <th>Tanggal Buat</th>
-                                <th class="text-center">Opsi</th>
+                                <sec:ifAllGranted roles="ROLE_ADMIN">
+                                    <th class="text-center">Opsi</th>
+                                </sec:ifAllGranted>
                             </tr>
                             </thead>
                             <tbody>

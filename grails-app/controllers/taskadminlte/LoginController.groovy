@@ -24,5 +24,8 @@ class LoginController {
 //        }
 //        redirect action:'index', controller:'mahasiswa'
     }
+    def auth(){
+
+    }
 
 }

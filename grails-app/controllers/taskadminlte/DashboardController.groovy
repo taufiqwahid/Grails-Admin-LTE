@@ -4,9 +4,10 @@ import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(['ROLE_ADMIN','ROLE_USER'])
 class DashboardController {
-
-
     def index() {
+
+        println(params)
+
         def Akun = Akun.list().size()
         def Dosen = Dosen.list().size()
         def Jadwal = Jadwal.list().size()

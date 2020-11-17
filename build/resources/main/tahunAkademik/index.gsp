@@ -28,10 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">Table Tahun Priode Akademik</h2>
-                        <g:link action="create">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
-                        </g:link>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
 
+                            <g:link action="create">
+                                <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
+                            </g:link>
+                        </sec:ifAllGranted>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -40,7 +42,10 @@
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
                                 <th class="text-center">Tahun Akademik</th>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+
                                 <th class="text-center">Opsi</th>
+                            </sec:ifAllGranted>
                             </tr>
                             </thead>
                             <tbody>
@@ -48,10 +53,13 @@
                             <tr>
                                     <td class="text-center">${thn.id}</td>
                                     <td class="text-center"><b>${thn.priode}</b></td>
-                                    <td class="text-center">
+                                    <sec:ifAllGranted roles="ROLE_ADMIN">
+
+                                        <td class="text-center">
                                         <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${thn.id}"><i class="far fa-edit"></i></g:link></div>
                                         <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${thn.id}"><i class="far fa-trash-alt"></i></g:link></div>
                                     </td>
+                                    </sec:ifAllGranted>
                             </tr>
                                 </g:each>
                             </tbody>

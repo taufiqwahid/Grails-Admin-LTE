@@ -8,14 +8,9 @@
 <g:render template="/layouts/Header"/>
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
-
 %{--CONTENTNYA--}%
 
 <div class="container">
-    <sec:ifLoggedIn>
-        <a href="/logout">logout</a>
-        <a href="/login">login</a>
-    </sec:ifLoggedIn>
 %{--    111111111--}%
     <!-- Small boxes (Stat box) -->
     <div class="row">
@@ -23,7 +18,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner text-navy">
-                    <h5>Dosen</h5>
+                    <h5><g:message code="dashboard.card.dosen"/></h5>
                     <h3>${Dosen}</h3>
                 </div>
                 <div class="icon">
@@ -37,7 +32,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h5>Mahasiswa</h5>
+                    <h5><g:message code="dashboard.card.mahasiswa"/></h5>
                     <h3>${Mahasiswa}</h3>
                 </div>
                 <div class="icon">
@@ -52,7 +47,7 @@
         <!-- small box -->
         <div class="small-box bg-warning">
             <div class="inner text-navy">
-                <h5>Matakuliah</h5>
+                <h5><g:message code="dashboard.card.matakuliah"/></h5>
 
                 <h3>${Matakuliah}</h3>
             </div>
@@ -68,7 +63,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                    <h5>Ruangan</h5>
+                    <h5><g:message code="dashboard.card.ruangan"/></h5>
 
                     <h3>${Ruangan}</h3>
                 </div>
@@ -91,7 +86,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h5>Jurusan</h5>
+                    <h5><g:message code="dashboard.card.jurusan"/></h5>
 
                     <h3>${Jurusan}</h3>
                 </div>
@@ -106,7 +101,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
                 <div class="inner">
-                    <h5>KRS</h5>
+                    <h5><g:message code="dashboard.card.krs"/></h5>
 
                     <h3>${Krs}</h3>
                 </div>
@@ -121,7 +116,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                    <h5>Nilai</h5>
+                    <h5><g:message code="dashboard.card.nilai"/></h5>
 
                     <h3>${Nilai}</h3>
                 </div>
@@ -136,14 +131,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <h5>Jadwal</h5>
+                    <h5><g:message code="dashboard.card.jadwal"/></h5>
 
                     <h3>${Jadwal}</h3>
                 </div>
                 <div class="icon">
                     <i class="fa fa-calendar-alt"></i>
                 </div>
-        <g:link controller="jadwal" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            <g:link controller="jadwal" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
             </div>
         </div>
         <!-- ./col -->
@@ -158,7 +153,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
                 <div class="inner text-navy">
-                    <h5>Penasehat Akademik</h5>
+                    <h5><g:message code="dashboard.card.penasehatAkademik"/></h5>
 
                     <h3>${PenasehatAkademik}</h3>
                 </div>
@@ -174,7 +169,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                    <h5>Tahun Akademik</h5>
+                    <h5><g:message code="dashboard.card.tahunAkademik"/></h5>
                     <h3>${TahunAkademik}</h3>
                 </div>
                 <div class="icon">
@@ -188,7 +183,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner text-navy">
-                    <h5>Data Akun</h5>
+                    <h5><g:message code="dashboard.card.akun"/></h5>
 
                     <h3>${Akun}</h3>
                 </div>
@@ -204,7 +199,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h5>LOGOUT</h5>
+                    <h5><g:message code="dashboard.card.logout"/></h5>
                 </div>
                 <div class="icon">
                     <i class="fas fa-sign-out-alt"></i>

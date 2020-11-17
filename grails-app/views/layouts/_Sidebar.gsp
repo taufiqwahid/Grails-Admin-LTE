@@ -16,6 +16,15 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
+        <div class="image">
+%{--            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">--}%
+            <i class="fa fa-user-astronaut fa-2x"></i>
+        </div>
+        <div class="info">
+            <a href="#" class="d-block text-bold"><sec:username/></a>
+        </div>
+    </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" id="linkActive" data-widget="treeview" role="menu" data-accordion="false">
@@ -139,7 +148,7 @@
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                            <li class="breadcrumb-item"><g:link controller="dashboard">Dashboard</g:link> </li>
                             <li class="breadcrumb-item active text-bold">${controllerName}</li>
                         </ol>
                     </div><!-- /.col -->

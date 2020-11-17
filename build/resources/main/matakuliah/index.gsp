@@ -28,10 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">Tabel Mata Kuliah</h2>
+                    <sec:ifAllGranted roles="ROLE_ADMIN">
+
                         <g:link action="create">
                             <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
                         </g:link>
-
+                    </sec:ifAllGranted>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -42,8 +44,10 @@
                                 <th>Nama</th>
                                 <th>Bebas SKS</th>
                                 <th>Semester</th>
-                                <th class="text-center">Opsi</th>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
 
+                        <th class="text-center">Opsi</th>
+                    </sec:ifAllGranted>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,10 +57,13 @@
                                     <td>${mk.nama}</td>
                                     <td>${mk.sks}</td>
                                     <td>${mk.semester}</td>
+                                <sec:ifAllGranted roles="ROLE_ADMIN">
+
                                     <td class="text-center">
                                         <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${mk.id}"><i class="far fa-edit"></i></g:link></div>
                                         <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mk.id}"><i class="far fa-trash-alt"></i></g:link></div>
                                     </td>
+                                </sec:ifAllGranted>
                                 </tr>
                             </g:each>
                             </tbody>
