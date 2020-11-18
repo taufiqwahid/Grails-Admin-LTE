@@ -15,22 +15,22 @@ class UrlMappings {
         "500"(view:'/error')
         "404"(view:'/notFound')
 
-        name langDe :'/de'{
+        name langENG :'/?lang=eng'{
             controller = 'dashboard'
             action = 'index'
         }
 
-        name langIn : '/in'{
+        name langIDN : '/?lang=in'{
             controller = 'dashboard'
             action = 'index'
         }
 
-        '/de' (controller: 'dashboard', action: 'index'){
-            lang = "de"
-        }
-        '/in' (controller: 'dashboard', action: 'index'){
-            lang = 'in'
-        }
+//        '/de' (controller: 'dashboard', action: 'index'){
+//            lang = "de"
+//        }
+//        '/in' (controller: 'dashboard', action: 'index'){
+//            lang = 'in'
+//        }
 
     }
 }

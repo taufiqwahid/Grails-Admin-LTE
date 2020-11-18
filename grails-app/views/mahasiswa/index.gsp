@@ -40,15 +40,15 @@
                                 <thead>
                                 <tr class="table-primary rounded">
                                     <th class="text-center">#</th>
-                                    <th>Nama</th>
-                                    <th>NIM</th>
-                                    <th>Alamat</th>
-                                    <th>Tgl Lahir</th>
-                                    <th>No Telp</th>
-                                    <th>Jurusan</th>
+                                    <th><g:message code="table.head.nama"/> </th>
+                                    <th><g:message code="table.head.nip"/></th>
+                                    <th><g:message code="table.head.jadwal"/></th>
+                                    <th><g:message code="table.head.tglLahir"/></th>
+                                    <th><g:message code="table.head.notelp"/></th>
+                                    <th><g:message code="table.head.jurusan"/></th>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <th class="text-center">Opsi</th>
+    <th class="text-center"><g:message code="table.head.opsi"/></th>
 </sec:ifAllGranted>
                                 </tr>
                                 </thead>

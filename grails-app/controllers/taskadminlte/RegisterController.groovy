@@ -18,10 +18,10 @@ class RegisterController {
             UserRole.create(user,userRole,true)
         }
             redirect action: 'index'
-
+            flash.message =  "Silahkan LOGIN !"
         }else {
-            flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            flash.message =  "Username telah digunakan !"
+            redirect action: 'index'
         }
     }
 }

@@ -35,7 +35,7 @@
                     <a href="/dosen" class="nav-link text-light">
                         <i class="fa fa-user-graduate"></i>
                         <p>
-                            Dosen
+                            <g:message code="sidebar.navlink.dosen"/>
                         </p>
                     </a>
                 </li>
@@ -43,7 +43,8 @@
                     <a href="/mahasiswa" class="nav-link text-light">
                        <i class="fa fa-users"></i>
                         <p>
-                            Mahasiswa
+                            <g:message code="sidebar.navlink.mahasiswa"/>
+
                         </p>
                     </a>
                 </li>
@@ -51,7 +52,7 @@
                     <a href="/mataKuliah" class="nav-link text-light">
                         <i class="fa fa-list-alt"></i>
                         <p>
-                            Matakuliah
+                            <g:message code="sidebar.navlink.matakuliah"/>
                         </p>
                     </a>
                 </li>
@@ -59,7 +60,8 @@
                     <a href="/ruangan" class="nav-link text-light">
                         <i class="fa fa-laptop-house"></i>
                         <p>
-                            Ruangan
+                            <g:message code="sidebar.navlink.ruangan"/>
+
                         </p>
                     </a>
                 </li>
@@ -68,7 +70,8 @@
                     <a href="/jurusan" class="nav-link align-bottom text-light">
                         <i class="fa fa-university"></i>
                         <p>
-                            Jurusan
+                            <g:message code="sidebar.navlink.jurusan"/>
+
                         </p>
                     </a>
                 </li>
@@ -76,7 +79,8 @@
                     <a href="/krs" class="nav-link align-bottom text-light">
                         <i class="fas fa-book-open"></i>
                         <p>
-                            KRS
+                            <g:message code="sidebar.navlink.krs"/>
+
                         </p>
                     </a>
                 </li>
@@ -84,7 +88,8 @@
                     <a href="/nilai" class="nav-link align-bottom text-light">
                         <i class="fa fa-poll"></i>
                         <p>
-                            Nilai
+                            <g:message code="sidebar.navlink.nilai"/>
+
                         </p>
                     </a>
                 </li>
@@ -92,7 +97,8 @@
                     <a href="/jadwal" class="nav-link align-bottom text-light">
                         <i class="fa fa-calendar-alt"></i>
                         <p>
-                            Jadwal
+                            <g:message code="sidebar.navlink.jadwal"/>
+
                         </p>
                     </a>
                 </li>
@@ -100,7 +106,8 @@
                     <a href="/penasehatAkademik" class="nav-link align-bottom text-light">
                         <i class="fa fa-user-shield"></i>
                         <p>
-                            Penasehat Akademik
+                            <g:message code="sidebar.navlink.penasehatAkademik"/>
+
                         </p>
                     </a>
                 </li>
@@ -110,7 +117,8 @@
                     <a href="/tahunAkademik" class="nav-link align-bottom text-light">
                         <i class="fas fa-calendar-week"></i>
                         <p>
-                            Tahun Akademik
+                            <g:message code="sidebar.navlink.tahunAkademik"/>
+
                         </p>
                     </a>
                 </li>
@@ -118,7 +126,8 @@
                     <a href="/akun" class="nav-link align-bottom text-light">
                         <i class="fa fa-user"></i>
                         <p>
-                            Akun
+                            <g:message code="sidebar.navlink.akun"/>
+
                         </p>
                     </a>
                 </li>
@@ -127,7 +136,8 @@
                     <a href="/logout" class="nav-link align-bottom text-light">
                         <i class="fas fa-sign-out-alt"></i>
                         <p>
-                            Logout
+                            <g:message code="sidebar.navlink.logout"/>
+
                         </p>
                     </a>
                 </li>

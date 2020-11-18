@@ -41,12 +41,12 @@
                         <thead>
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Kode Ruangan</th>
-                                <th>Jurusan</th>
-                                <th>Matakuliah</th>
+                                <th><g:message code="table.head.ruangan"/></th>
+                                <th><g:message code="table.head.jurusan"/></th>
+                                <th><g:message code="table.head.matakuliah"/> </th>
                             <sec:ifAllGranted roles="ROLE_ADMIN">
 
-                                <th class="text-center">Opsi</th>
+                                <th class="text-center"><g:message code="table.head.opsi"/> </th>
                             </sec:ifAllGranted>
                             </tr>
                             </thead>

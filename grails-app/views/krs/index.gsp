@@ -41,10 +41,10 @@
                         <thead>
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Nama Mahasiswa</th>
-                                <th>Matakuliah</th>
-                                <th>Tahun Akademik</th>
-                                <th>Penasehat Akademik</th>
+                                <th><g:message code="table.head.nama"/> </th>
+                                <th><g:message code="table.head.matakuliah"/> </th>
+                                <th><g:message code="table.head.tahunAkademik"/> </th>
+                                <th><g:message code="table.head.penasehatAkademik"/> </th>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
     <th class="text-center">Opsi</th>

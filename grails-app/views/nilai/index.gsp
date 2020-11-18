@@ -41,13 +41,13 @@
                         <thead>
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Mata Kuliah</th>
-                                <th>NIM</th>
-                                <th>Nilai UTS</th>
-                                <th>Nilai UAS</th>
+                                <th><g:message code="table.head.matakuliah"/> </th>
+                                <th><g:message code="table.head.nip"/> </th>
+                                <th><g:message code="table.head.nilaiUts"/> </th>
+                                <th><g:message code="table.head.nilaiUas"/> </th>
                             <sec:ifAllGranted roles="ROLE_ADMIN">
 
-                                <th class="text-center">Opsi</th>
+                                <th class="text-center"><g:message code="table.head.opsi"/></th>
                             </sec:ifAllGranted>
                             </tr>
                             </thead>

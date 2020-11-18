@@ -13,14 +13,14 @@
         </li>
     </ul>
 
-    <div class="btn-group">
-        <button type="button" class="btn btn-danger">Action</button>
-        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="btn-group navbar-nav ml-auto">
+        <button type="button" class="btn btn-danger bg-white border-white"><g:message code="navbar.lang.in"/> </button>
+        <button type="button" class="btn btn-danger dropdown-toggle bg-white border-white dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <div class="dropdown-menu">
-            <g:link class="dropdown-item" mapping="langDe">DE</g:link>
-            <g:link class="dropdown-item" mapping="langIn">IN</g:link>
+        <div class="dropdown-menu ">
+            <g:link class="dropdown-item" mapping="langENG">ENG</g:link>
+            <g:link class="dropdown-item" mapping="langIDN">IDN</g:link>
             <a class="dropdown-item" href="#">Another action</a>
         </div>
     </div>

@@ -42,15 +42,15 @@
                             <thead>
                             <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Nama Dosen</th>
-                                <th>Matakuliah</th>
-                                <th>Hari</th>
-                                <th>Jam</th>
-                                <th>Tahun Akademik</th>
-                                <th>Ruangan</th>
+                                <th><g:message code="table.head.nama" /></th>
+                                <th><g:message code="table.head.matakuliah" /></th>
+                                <th><g:message code="table.head.hari" /></th>
+                                <th><g:message code="table.head.jam" /></th>
+                                <th><g:message code="table.head.tahunAkademik" /></th>
+                                <th><g:message code="table.head.ruangan" /></th>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <th class="text-center">Opsi</th>
+    <th class="text-center"><g:message code="table.head.opsi" /></th>
 </sec:ifAllGranted>
                             </tr>
                             </thead>

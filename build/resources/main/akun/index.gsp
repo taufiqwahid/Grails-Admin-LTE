@@ -41,33 +41,29 @@
                             <thead>
                             <tr class="table-primary rounded">
                                 <th class="text-center">#</th>
-                                <th>Nama</th>
-                                <th>Emal</th>
-                                <th>Password</th>
-                                <th>Tanggal Buat</th>
+                                <th><g:message code="table.head.username" /></th>
+                                <th><g:message code="table.head.password" /></th>
                                 <sec:ifAllGranted roles="ROLE_ADMIN">
-                                    <th class="text-center">Opsi</th>
+                                    <th class="text-center"><g:message code="table.head.opsi"/> </th>
                                 </sec:ifAllGranted>
                             </tr>
                             </thead>
                             <tbody>
-                            <g:each in="${akun}" var="akn">
-                                <tr>
-                                    <td class="text-center">${akn.id}</td>
-                                    <td>${akn.nama}</td>
-                                    <td>${akn.email}</td>
-                                    <td>${akn.password}</td>
-                                    <td>${akn.tanggal}</td>
-                                    <sec:ifAllGranted roles="ROLE_ADMIN">
-                                        <td class="text-center">
-                                            <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${akn.id}"><i class="far fa-edit"></i></g:link></div>
-                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${akn.id}"><i class="far fa-trash-alt"></i></g:link></div>
-                                        </td>
+%{--                            <g:each in="${user}" var="usr">--}%
+%{--                                <tr>--}%
+%{--                                    <td class="text-center">${usr.id}</td>--}%
+%{--                                    <td>${usr.user.username}</td>--}%
+%{--                                    <td>${usr.role.authority}</td>--}%
+%{--                                    <sec:ifAllGranted roles="ROLE_ADMIN">--}%
+%{--                                        <td class="text-center">--}%
+%{--                                            <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${usr.id}"><i class="far fa-edit"></i></g:link></div>--}%
+%{--                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${usr.id}"><i class="far fa-trash-alt"></i></g:link></div>--}%
+%{--                                        </td>--}%
 
-                                    </sec:ifAllGranted>
+%{--                                    </sec:ifAllGranted>--}%
 
-                                </tr>
-                            </g:each>
+%{--                                </tr>--}%
+%{--                            </g:each>--}%
                             </tbody>
                         </tfoot>
                         </table>

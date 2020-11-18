@@ -31,7 +31,7 @@
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
     <g:link action="create">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/></button>
                         </g:link>
 </sec:ifAllGranted>
                     </div>
@@ -41,13 +41,13 @@
                             <thead>
                             <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Nama</th>
-                                <th>NIP</th>
-                                <th>Alamat</th>
-                                <th>Jurusan</th>
+                                <th><g:message code="table.head.nama"/> </th>
+                                <th><g:message code="table.head.nip"/></th>
+                                <th><g:message code="table.head.alamat"/></th>
+                                <th><g:message code="table.head.jurusan"/></th>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <th class="text-center">Opsi</th>
+    <th class="text-center"><g:message code="table.head.opsi"/> </th>
 </sec:ifAllGranted>
                             </tr>
                             </thead>

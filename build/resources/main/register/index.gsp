@@ -13,7 +13,15 @@
     </div>
     <!-- /.login-logo -->
     <g:if test="${flash.message}">
-        <br/><div class="text-center text-red" role="status">${flash.message}</div>
+    %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
+        <div class="container">
+            <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
+                <strong>Warning</strong> ${flash.message}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
     </g:if>
     <div class="card">
         <div class="card-body login-card-body">
@@ -48,7 +56,7 @@
                 <div class="social-auth-links text-center mb-3">
                     <div class="">
                         %{--                    <button type="submit" class="btn btn-primary btn-block"></i>Sign In</button>--}%
-                        <g:actionSubmit value="Create" class="btn btn-primary btn-block"/>
+                        <g:actionSubmit action="save" value="Save" class="btn btn-primary btn-block"/>
                     </div><br/>
                     <p>- OR -</p>
                     <g:link controller="login" action="auth" class="btn btn-success btn-block">Login</g:link>

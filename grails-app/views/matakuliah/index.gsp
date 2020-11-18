@@ -41,12 +41,12 @@
                         <thead>
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th>Nama</th>
-                                <th>Bebas SKS</th>
-                                <th>Semester</th>
+                                <th><g:message code="table.head.nama"/> </th>
+                                <th><g:message code="table.head.bebanSks"/> </th>
+                                <th><g:message code="table.head.semester"/></th>
                         <sec:ifAllGranted roles="ROLE_ADMIN">
 
-                        <th class="text-center">Opsi</th>
+                        <th class="text-center"><g:message code="table.head.opsi"/> </th>
                     </sec:ifAllGranted>
                             </tr>
                             </thead>
