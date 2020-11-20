@@ -31,10 +31,10 @@ class RuanganController {
         ruangan.properties = params
         if (ruangan.validate()){
             ruangan.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'ruangan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'ruangan', params: [lang: params.lang]
         }
     }
 
@@ -42,15 +42,15 @@ class RuanganController {
         def ruangan = new Ruangan(params)
         if (ruangan.validate()){
             ruangan.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'ruangan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'ruangan', params: [lang: params.lang]
         }
     }
     def delete(){
         def ruangan = Ruangan.get(params.id)
         ruangan.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'ruangan', params: [lang: params.lang]
     }
 }

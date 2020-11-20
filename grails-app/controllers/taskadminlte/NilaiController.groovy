@@ -29,10 +29,10 @@ class NilaiController {
         nilai.properties = params
         if (nilai.validate()){
             nilai.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'nilai', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'nilai', params: [lang: params.lang]
         }
     }
 
@@ -40,15 +40,15 @@ class NilaiController {
         def nilai = new Nilai(params)
         if (nilai.validate()){
             nilai.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'nilai', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'nilai', params: [lang: params.lang]
         }
     }
     def delete(){
         def nilai = Nilai.get(params.id)
         nilai.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'nilai', params: [lang: params.lang]
     }
 }

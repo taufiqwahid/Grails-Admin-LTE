@@ -26,7 +26,7 @@ class LoginController {
 //        redirect action:'index', controller:'mahasiswa'
     }
     def auth(){
-
+        println(params.lang)
     }
 
     def register(){

@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar  bg-navy elevation-4 bg-dark">
     <!-- Brand Logo -->
-    <a href="/dashboard/" class="brand-link text-center">
+    <a href="${createLink(params: [lang: params.lang], controller: 'dashboard', action: 'index')}" class="brand-link text-center">
 %{--    <img src="" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"--}%
 %{--         style="opacity: .8">--}%
 
@@ -32,7 +32,7 @@
                with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="/dosen" class="nav-link text-light">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'dosen', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-user-graduate"></i>
                         <p>
                             <g:message code="sidebar.navlink.dosen"/>
@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/mahasiswa" class="nav-link text-light">
+                    <a href="${createLink(params: [lang: params.lang], controller: 'mahasiswa', action: 'index')}" class="nav-link text-light">
                        <i class="fa fa-users"></i>
                         <p>
                             <g:message code="sidebar.navlink.mahasiswa"/>
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/mataKuliah" class="nav-link text-light">
+                    <a href="${createLink(params: [lang: params.lang], controller: 'mataKuliah', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-list-alt"></i>
                         <p>
                             <g:message code="sidebar.navlink.matakuliah"/>
@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/ruangan" class="nav-link text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'ruangan', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-laptop-house"></i>
                         <p>
                             <g:message code="sidebar.navlink.ruangan"/>
@@ -67,25 +67,23 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/jurusan" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'jurusan', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-university"></i>
                         <p>
                             <g:message code="sidebar.navlink.jurusan"/>
-
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/krs" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'krs', action: 'index')}" class="nav-link text-light">
                         <i class="fas fa-book-open"></i>
                         <p>
                             <g:message code="sidebar.navlink.krs"/>
-
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/nilai" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'nilai', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-poll"></i>
                         <p>
                             <g:message code="sidebar.navlink.nilai"/>
@@ -94,7 +92,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jadwal" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'jadwal', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-calendar-alt"></i>
                         <p>
                             <g:message code="sidebar.navlink.jadwal"/>
@@ -103,7 +101,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/penasehatAkademik" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'penasehatAkademik', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-user-shield"></i>
                         <p>
                             <g:message code="sidebar.navlink.penasehatAkademik"/>
@@ -114,7 +112,7 @@
             <sec:ifAllGranted roles="ROLE_ADMIN">
 
                 <li class="nav-item">
-                    <a href="/tahunAkademik" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'tahunAkademik', action: 'index')}" class="nav-link text-light">
                         <i class="fas fa-calendar-week"></i>
                         <p>
                             <g:message code="sidebar.navlink.tahunAkademik"/>
@@ -123,7 +121,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/akun" class="nav-link align-bottom text-light">
+                    <a href="${createLink(params: [lang: params.lang],controller: 'akun', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-user"></i>
                         <p>
                             <g:message code="sidebar.navlink.akun"/>
@@ -133,11 +131,10 @@
                 </li>
             </sec:ifAllGranted>
                 <li class="nav-item btn-danger rounded">
-                    <a href="/logout" class="nav-link align-bottom text-light">
-                        <i class="fas fa-sign-out-alt"></i>
+                    <a href="${createLink(controller: 'logout', action: 'index')}" class="nav-link text-light">
+                    <i class="fas fa-sign-out-alt"></i>
                         <p>
                             <g:message code="sidebar.navlink.logout"/>
-
                         </p>
                     </a>
                 </li>
@@ -152,13 +149,15 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
-                <h1 class="text-navy text-center text-bold">Universitas Apalah</h1>
+                <h1 class="text-navy text-center text-bold"><g:message code="sidebar.navbar.title"/> Apalah</h1>
                 <div class="row mb-2">
                     <div class="col-sm-6">
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><g:link controller="dashboard">Dashboard</g:link> </li>
+                            <li class="breadcrumb-item">
+                                <a href="${createLink(params: [lang: params.lang], controller: 'dashboard', action: 'index')}">Dashboard</a>
+                            </li>
                             <li class="breadcrumb-item active text-bold">${controllerName}</li>
                         </ol>
                     </div><!-- /.col -->

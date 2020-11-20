@@ -21,7 +21,7 @@
     <g:form controller="nilai" action="save" method="POST">
       <div class="card-body">
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Mata Kuliah</label>
+          <label for="exampleFormControlSelect1"><g:message code="form.label.matakuliah"/></label>
           <select name="matakuliah" class="form-control" id="exampleFormControlSelect1">
             <g:each in="${matkul}" var="mk">
               <option value="${mk.id}">${mk.nama}</option>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-          <label for="exampleFormControlSelect1">NIM Mahasiswa</label>
+          <label for="exampleFormControlSelect1"><g:message code="form.label.nip"/></label>
           <select name="nim" class="form-control" id="exampleFormControlSelect7">
             <g:each in="${mahasiswa}" var="mhs">
               <option value="${mhs.id}">${mhs.nim}</option>
@@ -39,11 +39,11 @@
         </div>
 
         <div class="form-group">
-          <label for="exampleInputEmail1">UTS</label>
+          <label for="exampleInputEmail1"><g:message code="form.label.nilaiUts"/></label>
           <g:textField type="text" name="uts" class="form-control" id="exampleInputEmail1" placeholder="Masukkan UTS "/>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">UAS</label>
+          <label for="exampleInputEmail1"><g:message code="form.label.nilaiUas"/></label>
           <g:textField type="text" name="uas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan UAS"/>
         </div>
       </div>
@@ -52,7 +52,7 @@
       %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
         <div class="container">
           <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-            <strong>Warning</strong> ${flash.message}
+            <strong>Warning</strong> <g:message code="error.message.form"/>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

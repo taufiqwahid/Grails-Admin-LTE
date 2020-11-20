@@ -24,7 +24,8 @@
                 <div class="icon">
                     <i class="fa fa-user-graduate"></i>
                 </div>
-            <g:link controller="dosen" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+                <a href="${createLink(params: [lang: params.lang],controller: 'dosen')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+%{--                <g:link controller="dosen" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>--}%
             </div>
         </div>
         <!-- ./col -->
@@ -38,7 +39,7 @@
                 <div class="icon">
                     <i class="fa fa-users"></i>
                 </div>
-                <g:link controller="mahasiswa" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'mahasiswa')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
         </div>
         <!-- ./col -->
@@ -54,7 +55,7 @@
             <div class="icon">
                 <i class="fa fa-laptop-house"></i>
             </div>
-            <g:link controller="ruangan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'mataKuliah')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -70,7 +71,7 @@
                 <div class="icon">
                     <i class="fa fa-laptop-house"></i>
                 </div>
-        <g:link controller="ruangan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'ruangan')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -93,7 +94,7 @@
                 <div class="icon">
                     <i class="fa fa-university"></i>
                 </div>
-            <g:link controller="jurusan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            <a href="${createLink(params: [lang: params.lang],controller: 'jurusan')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -108,7 +109,7 @@
                 <div class="icon">
                     <i class="fas fa-book-open"></i>
                 </div>
-        <g:link controller="krs" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'krs')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -123,7 +124,7 @@
                 <div class="icon">
                     <i class="fa fa-poll"></i>
                 </div>
-        <g:link controller="nilai" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'nilai')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -138,7 +139,7 @@
                 <div class="icon">
                     <i class="fa fa-calendar-alt"></i>
                 </div>
-            <g:link controller="jadwal" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+        <a href="${createLink(params: [lang: params.lang],controller: 'jadwal')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -160,7 +161,7 @@
                 <div class="icon">
                     <i class="fa fa-user-shield"></i>
                 </div>
-            <g:link controller="penasehatAkademik" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            <a href="${createLink(params: [lang: params.lang],controller: 'penasehatAkademik')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     <sec:ifAllGranted roles="ROLE_ADMIN">
@@ -175,7 +176,7 @@
                 <div class="icon">
                     <i class="fas fa-calendar-week"></i>
                 </div>
-        <g:link controller="tahunAkademik" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            <a href="${createLink(params: [lang: params.lang],controller: 'tahunAkademik')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -190,7 +191,7 @@
                 <div class="icon">
                     <i class="fa fa-user"></i>
                 </div>
-        <g:link controller="akun" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>
+            <a href="${createLink(params: [lang: params.lang],controller: 'akun')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->

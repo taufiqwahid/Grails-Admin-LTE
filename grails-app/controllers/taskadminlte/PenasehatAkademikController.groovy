@@ -24,10 +24,10 @@ class PenasehatAkademikController {
         def pa = new PenasehatAkademik(params)
         if (pa.validate()){
             pa.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'penasehatAkademik', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'penasehatAkademik', params: [lang: params.lang]
         }
     }
     @Secured(['ROLE_ADMIN'])
@@ -49,16 +49,16 @@ class PenasehatAkademikController {
         penasehatAkademik.properties = params
         if (penasehatAkademik.validate()){
             penasehatAkademik.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'penasehatAkademik', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'penasehatAkademik', params: [lang: params.lang]
         }
     }
 
     def delete(){
         def penasehatAkademik = PenasehatAkademik.get(params.id)
         penasehatAkademik.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'penasehatAkademik', params: [lang: params.lang]
     }
 }

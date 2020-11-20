@@ -26,10 +26,10 @@ class JadwalController {
         def pa = new Jadwal(params)
         if (pa.validate()){
             pa.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'jadwal', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'jadwal', params: [lang: params.lang]
         }
     }
     @Secured(['ROLE_ADMIN'])
@@ -51,15 +51,15 @@ class JadwalController {
         jadwal.properties = params
         if (jadwal.validate()){
             jadwal.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller:'jadwal', params:[lang:params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller:'jadwal', params:[lang:params.lang]
         }
     }
     def delete(){
         def jadwal = Jadwal.get(params.id)
         jadwal.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'jadwal', params: [lang: params.lang]
     }
 }

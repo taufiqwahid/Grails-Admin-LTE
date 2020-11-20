@@ -20,24 +20,20 @@
             <g:form controller="akun" action="update" method="POST" id="${akun.id}">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama</label>
-                        <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Lengkap" value="${akun.nama}"/>
-                    </div>
+                        <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
+                <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Username" value="${akun.username}"/>
+                        </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
-                        <g:textField type="email" name="email" required="" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Email" value="${akun.email}" />
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Password</label>
-                        <g:textField type="password" name="password" required="" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Password" value="${akun.password}"/>
-                    </div>
+                        <label for="exampleInputEmail1"><g:message code="form.label.password"/></label>
+                <g:textField type="text" name="password" required="" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Password" value="${akun.password}"/>
+                </div>
                 </div>
                 <!-- /.card-body -->
                 <g:if test="${flash.message}">
                 %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                     <div class="container">
                         <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                            <strong>Warning</strong> ${flash.message}
+                            <strong>Warning</strong> <g:message code="error.message.edit"/>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

@@ -14,27 +14,27 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data Dosen</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.dosen"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
         <g:form controller="dosen" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.nama"/></label>
                     <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">NIP</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.nip"/></label>
                     <g:textField type="text" name="nip" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIP Dosen"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Alamat</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.alamat"/></label>
                     <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Jurusan</label>
+                    <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>
                     <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
                         <g:each in="${jurusan}" var="jrs">
                             <option value="${jrs.id}">${jrs.nama}</option>
@@ -47,7 +47,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -57,7 +57,7 @@
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
                 <g:actionSubmit value="save" class="btn btn-primary"/>
-            </div>
+            </div
         </g:form>
     </div>
 </div>

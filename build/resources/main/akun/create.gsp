@@ -15,7 +15,7 @@
     <div class="container">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Tambah Akun</h3>
+                <h3 class="card-title"><g:message code="form.label.tambah"/></h3>
             </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -23,15 +23,11 @@
             <g:form controller="akun" action="save" method="POST">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama</label>
-                        <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Lengkap"/>
+                        <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
+                        <g:textField type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Username"/>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
-                        <g:textField type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Email"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Password</label>
+                        <label for="exampleInputEmail1"><g:message code="form.label.password"/></label>
                         <g:textField type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Password"/>
                     </div>
                 </div>
@@ -40,7 +36,7 @@
                 %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                     <div class="container">
                         <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                            <strong>Warning</strong> ${flash.message}
+                            <strong>Warning</strong> <g:message code="error.message.form"/>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

@@ -26,10 +26,10 @@ class KrsController {
         def krs = new Krs(params)
         if (krs.validate()){
             krs.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'krs', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'krs', params: [lang: params.lang]
         }
     }
     @Secured(['ROLE_ADMIN'])
@@ -52,15 +52,17 @@ class KrsController {
         krs.properties = params
         if (krs.validate()){
             krs.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'krs', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'krs', params: [lang: params.lang]
         }
     }
     def delete(){
         def krs = Krs.get(params.id)
-        krs.delete flush: true, failOnError: true
-        redirect action: 'index'
+            krs.delete flush: true, failOnError: true
+            flash.message = "Failed to Delete"
+            redirect action: 'index', controller: 'krs', params: [lang: params.lang]
+
     }
 }

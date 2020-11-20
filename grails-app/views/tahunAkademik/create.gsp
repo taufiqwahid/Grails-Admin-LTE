@@ -14,7 +14,7 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Priode</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> Priode</h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -22,7 +22,7 @@
         %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
             <div class="container">
                 <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                    <strong>Warning</strong> ${flash.message}
+                    <strong>Warning</strong> <g:message code="error.message.form"/>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -33,7 +33,7 @@
         <div class="container">
             <div class="container">
                 <g:form controller="tahunAkademik" action="save" method="POST" class="form-inline">
-                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tahun Akademik Priode</label>
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><g:message code="form.label.tahunAkademik"/> Priode</label>
                     <select name="priode" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                         <option selected disabled>Tahun...</option>
                         <option value="2019">2019</option>

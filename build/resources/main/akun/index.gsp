@@ -16,7 +16,7 @@
         %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
             <div class="container">
                 <div class="alert bg-gradient-danger alert-dismissible fade show" role="alert">
-                    <strong>Danger : </strong> ${flash.message}
+                    <strong>Danger : </strong> <g:message code="error.message.delete"/>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -27,11 +27,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tabel Data Akun</h3>
+                        <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.akun"/> </h3>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
     <g:link action="create">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="form.label.tambah"/> </button>
                         </g:link>
 </sec:ifAllGranted>
                     </div>
@@ -41,29 +41,28 @@
                             <thead>
                             <tr class="table-primary rounded">
                                 <th class="text-center">#</th>
-                                <th><g:message code="table.head.username" /></th>
-                                <th><g:message code="table.head.password" /></th>
+                                <th class="text-center"><g:message code="table.head.username" /></th>
+                                <th class="text-center"><g:message code="table.head.role" /></th>
                                 <sec:ifAllGranted roles="ROLE_ADMIN">
                                     <th class="text-center"><g:message code="table.head.opsi"/> </th>
                                 </sec:ifAllGranted>
                             </tr>
                             </thead>
                             <tbody>
-%{--                            <g:each in="${user}" var="usr">--}%
-%{--                                <tr>--}%
-%{--                                    <td class="text-center">${usr.id}</td>--}%
-%{--                                    <td>${usr.user.username}</td>--}%
-%{--                                    <td>${usr.role.authority}</td>--}%
-%{--                                    <sec:ifAllGranted roles="ROLE_ADMIN">--}%
-%{--                                        <td class="text-center">--}%
-%{--                                            <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${usr.id}"><i class="far fa-edit"></i></g:link></div>--}%
-%{--                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${usr.id}"><i class="far fa-trash-alt"></i></g:link></div>--}%
-%{--                                        </td>--}%
+                            <g:each in="${user}" var="usr">
+                                <tr>
+                                    <td class="text-center">${usr.user.id}</td>
+                                    <td class="text-center">${usr.user.username}</td>
+                                    <td class="text-center">${usr.role.authority}</td>
+                                    <sec:ifAllGranted roles="ROLE_ADMIN">
+                                        <td class="text-center">
+                                            <div class="btn btn-warning"><g:link params="[lang:params.lang]" action="edit" class="text-light" id="${usr.user.id}"><i class="far fa-edit"></i></g:link></div>
+                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${usr.user.id}"><i class="far fa-trash-alt"></i></g:link></div>
+                                        </td>
+                                    </sec:ifAllGranted>
 
-%{--                                    </sec:ifAllGranted>--}%
-
-%{--                                </tr>--}%
-%{--                            </g:each>--}%
+                                </tr>
+                            </g:each>
                             </tbody>
                         </tfoot>
                         </table>

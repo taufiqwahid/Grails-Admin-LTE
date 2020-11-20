@@ -17,10 +17,10 @@ class TahunAkademikController {
         def tahun = new TahunAkademik(params)
         if (tahun.validate()){
             tahun.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'tahunAkademik', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'tahunAkademik', params: [lang: params.lang]
         }
     }
     @Secured(['ROLE_ADMIN'])
@@ -33,17 +33,17 @@ class TahunAkademikController {
     def delete(){
         def tahun = TahunAkademik.get(params.id)
         tahun.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'tahunAkademik', params: [lang: params.lang]
     }
     def update(){
         def tahun = TahunAkademik.get(params.id)
         tahun.properties = params
         if (tahun.validate()){
             tahun.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'tahunAkademik', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'tahunAkademik', params: [lang: params.lang]
         }
     }
 }

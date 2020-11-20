@@ -14,14 +14,14 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Penasehat Akademik</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.penasehatAkademik"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
         <g:form controller="penasehatAkademik" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Mahasiswa</label>
+                    <label for="exampleFormControlSelect1"><g:message code="form.label.mahasiswa"/></label>
                     <select name="mahasiswa" class="form-control" id="exampleFormControlSelect1">
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nama}</option>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect2">Dosen</label>
+                    <label for="exampleFormControlSelect2"><g:message code="form.label.dosen"/></label>
                     <select name="dosen" class="form-control" id="exampleFormControlSelect2">
                         <g:each in="${dosen}" var="dsn">
                             <option value="${dsn.id}">${dsn.nama}</option>
@@ -37,7 +37,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect3">Jurusan</label>
+                    <label for="exampleFormControlSelect3"><g:message code="form.label.tahunAkademik"/></label>
                     <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect3">
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
@@ -51,7 +51,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

@@ -26,10 +26,10 @@ class DosenController {
         dosen.properties = params
         if (dosen.validate()){
             dosen.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
         }
     }
 
@@ -37,15 +37,21 @@ class DosenController {
         def dosen = new Dosen(params)
         if (dosen.validate()){
             dosen.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
         }else {
-            flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            flash.message =  "failed save"
+            redirect action: 'create', controller:'dosen', params:[lang:params.lang]
         }
     }
     def delete(){
         def dosen = Dosen.get(params.id)
-        dosen.delete flush: true, failOnError: true
-        redirect action: 'index'
+        if (dosen.validate()){
+            dosen.delete flush: true, failOnError: true
+            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
+        }else{
+            flash.message = "Failed Delete"
+            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
+        }
+
     }
 }

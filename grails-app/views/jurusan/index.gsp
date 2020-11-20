@@ -16,7 +16,7 @@
         %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
             <div class="container">
                 <div class="alert bg-gradient-danger alert-dismissible fade show" role="alert">
-                    <strong>Danger : </strong> ${flash.message}
+                    <strong>Danger : </strong> <g:message code="error.message.delete"/>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -27,11 +27,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">Tabel Data Jurusan</h2>
+                        <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.jurusan"/> </h2>
 <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <g:link action="create">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
+    <g:link action="create" params="[lang: params.lang]">
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
                         </g:link>
 </sec:ifAllGranted>
                     </div>
@@ -58,8 +58,8 @@
                                 <sec:ifAllGranted roles="ROLE_ADMIN">
 
                                     <td class="text-center">
-                                        <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${jrs.id}"><i class="far fa-edit"></i></g:link></div>
-                                        <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${jrs.id}"><i class="far fa-trash-alt"></i></g:link></div>
+                                        <a class="btn btn-warning text-light" href="${createLink(params: [lang:params.lang],id: jrs.id, action: 'edit', controller:'jurusan')}" ><i class="far fa-edit"></i></a>
+                                        <a class="btn btn-danger text-light" href="${createLink(params: [lang:params.lang], id: jrs.id, action: 'delete', controller:'jurusan')}" ><i class="far fa-trash-alt"></i></a>
                                     </td>
                                 </sec:ifAllGranted>
                                 </tr>

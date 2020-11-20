@@ -9,7 +9,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/dashboard" class="nav-link"><i class="fa fa-home"></i> Dashboard</a>
+            <a href="${createLink(params: [lang: params.lang], controller: 'dashboard', action: 'index')}" class="nav-link"><i class="fa fa-home"></i> Dashboard</a>
         </li>
     </ul>
 
@@ -19,9 +19,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </button>
         <div class="dropdown-menu ">
-            <g:link class="dropdown-item" mapping="langENG">ENG</g:link>
-            <g:link class="dropdown-item" mapping="langIDN">IDN</g:link>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="${createLink(params: [lang:'in'])}">Indonesia</a>
+            <a class="dropdown-item" href="${createLink(params: [lang:'en'])}">English</a>
         </div>
     </div>
 

@@ -14,7 +14,7 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Mata Kuliah</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.matakuliah"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -24,15 +24,15 @@
         <g:form controller="mataKuliah" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Matakuliah</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.matakuliah"/></label>
                     <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">SKS</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.bebanSks"/></label>
                     <g:textField type="number" name="sks" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jumlah SKS"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Semester</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.semester"/></label>
                     <g:textField type="text" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester"/>
                 </div>
 
@@ -42,7 +42,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

@@ -15,34 +15,34 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data Mahasiswa</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.mahasiswa"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
         <g:form controller="mahasiswa" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.nama"/></label>
                     <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">NIM</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.nip"/></label>
                     <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Alamat</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.alamat"/></label>
                     <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Tanggal Lahir</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.tglLahir"/></label>
                     <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tglLahir" class="form-control"  placeholder="Masukkan anggal Lahir">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">No Telepon</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.notelp"/></label>
                     <g:textField type="text" name="noTelp" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No Telepon "/>
                 </div>
                 <div class="form-group">
-                        <label for="exampleFormControlSelect1">Jurusan</label>
+                        <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>
                         <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
                             <option value="NULL">Pilih...</option>
                             <g:each in="${jurusan}" var="jrs">
@@ -56,7 +56,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

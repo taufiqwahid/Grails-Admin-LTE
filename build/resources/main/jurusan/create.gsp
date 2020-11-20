@@ -14,18 +14,18 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data Jurusan</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.jurusan"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
         <g:form controller="jurusan" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Jurusan</label>
+                    <label for="exampleInputEmail1"> <g:message code="form.label.nama"/></label>
                     <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Jurusan"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Fakultas</label>
+                    <label for="exampleInputEmail1"><g:message code="form.label.fakultas"/></label>
                     <g:textField type="text" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas"/>
                 </div>
             </div>
@@ -34,7 +34,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

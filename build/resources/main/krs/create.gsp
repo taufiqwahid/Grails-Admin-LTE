@@ -14,14 +14,14 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah KRS</h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> KRS</h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
         <g:form controller="krs" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Mahasiswa</label>
+                    <label for="exampleFormControlSelect1"><g:message code="form.label.mahasiswa"/></label>
                     <select name="mahasiswa" class="form-control" id="exampleFormControlSelect1">
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nama}</option>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect2">Mata Kuliah</label>
+                    <label for="exampleFormControlSelect2"><g:message code="form.label.matakuliah"/></label>
                     <select name="matakuliah" class="form-control" id="exampleFormControlSelect2">
                         <g:each in="${matkul}" var="mk">
                             <option value="${mk.id}">${mk.nama}</option>
@@ -37,7 +37,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect3">Tahun Akademik</label>
+                    <label for="exampleFormControlSelect3"><g:message code="form.label.tahunAkademik"/></label>
                     <select name="tahunAkademik" class="form-control" id="exampleFormControlSelect3">
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
@@ -45,7 +45,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect4">Penasehat Akademik</label>
+                    <label for="exampleFormControlSelect4"><g:message code="form.label.penasehatAkademik"/></label>
                     <select name="penasehatAkademik" class="form-control" id="exampleFormControlSelect4">
                         <g:each in="${penasehatAkademik}" var="pa">
                             <option value="${pa.dosen.id}">${pa.dosen.nama}</option>
@@ -59,7 +59,7 @@
             %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
                 <div class="container">
                     <div class="alert bg-gradient-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning</strong> ${flash.message}
+                        <strong>Warning</strong> <g:message code="error.message.form"/>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

@@ -13,6 +13,7 @@ class MahasiswaController {
 
     def create(){
         def jurusan = Jurusan.list()
+
         [jurusan: jurusan]
     }
     @Secured(['ROLE_ADMIN'])
@@ -28,10 +29,10 @@ class MahasiswaController {
         mahasiswa.properties = params
         if (mahasiswa.validate()){
             mahasiswa.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'mahasiswa', params: [lang:params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'mahasiswa', params: [lang: params.lang]
         }
     }
 
@@ -39,15 +40,15 @@ class MahasiswaController {
         def mahasiswa = new Mahasiswa(params)
         if (mahasiswa.validate()){
             mahasiswa.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller:'mahasiswa', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'mahasiswa', params: [lang: params.lang]
         }
     }
     def delete(){
         def mahasiswa = Mahasiswa.get(params.id)
         mahasiswa.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'mahasiswa', params: [lang: params.lang]
     }
 }

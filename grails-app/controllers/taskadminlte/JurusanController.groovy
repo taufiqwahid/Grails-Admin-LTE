@@ -26,10 +26,10 @@ class JurusanController {
         jurusan.properties = params
         if (jurusan.validate()){
             jurusan.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua sebelum mengedit !"
-            redirect action: 'index'
+            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
         }
     }
 
@@ -37,10 +37,10 @@ class JurusanController {
         def jurusan = new Jurusan(params)
         if (jurusan.validate()){
             jurusan.save flush:true, failOnError:true
-            redirect action: 'index'
+            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            redirect action: 'create', controller: 'jurusan', params: [lang: params.lang]
         }
 
     }
@@ -48,7 +48,14 @@ class JurusanController {
     def delete(){
         def jurusan = Jurusan.get(params.id)
         jurusan.delete flush: true, failOnError: true
-        redirect action: 'index'
+        redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
+        try {
+            jurusan.delete flush: true, failOnError: true
+            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
+        } catch(Exception e){
+            flash.message = "Failed Delete ${e}"
+            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
+        }
     }
 
     def detailJurusan(){

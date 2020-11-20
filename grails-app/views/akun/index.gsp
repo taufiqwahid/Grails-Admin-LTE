@@ -16,7 +16,7 @@
         %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
             <div class="container">
                 <div class="alert bg-gradient-danger alert-dismissible fade show" role="alert">
-                    <strong>Danger : </strong> ${flash.message}
+                    <strong>Danger : </strong> <g:message code="error.message.delete"/>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -27,13 +27,13 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tabel Data Akun</h3>
-<sec:ifAllGranted roles="ROLE_ADMIN">
+                        <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.akun"/> </h3>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <g:link action="create">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> Tambah Data</button>
+                         <g:link action="create" params="[lang:params.lang]">
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="form.label.tambah"/> </button>
                         </g:link>
-</sec:ifAllGranted>
+                        </sec:ifAllGranted>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -56,10 +56,9 @@
                                     <td class="text-center">${usr.role.authority}</td>
                                     <sec:ifAllGranted roles="ROLE_ADMIN">
                                         <td class="text-center">
-                                            <div class="btn btn-warning"><g:link action="edit" class="text-light" id="${usr.user.id}"><i class="far fa-edit"></i></g:link></div>
+                                            <div class="btn btn-warning"><g:link params="[lang:params.lang]" action="edit" class="text-light" id="${usr.user.id}"><i class="far fa-edit"></i></g:link></div>
                                             <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${usr.user.id}"><i class="far fa-trash-alt"></i></g:link></div>
                                         </td>
-
                                     </sec:ifAllGranted>
 
                                 </tr>
