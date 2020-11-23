@@ -18,9 +18,7 @@
         </div>
     <!-- /.card-header -->
     <!-- form start -->
-        <g:if test="${flash.message}">
-            <br/><div class="text-center text-red" role="status">${flash.message}</div>
-        </g:if>
+
         <g:form controller="jadwal" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
@@ -41,11 +39,13 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.hari"/></label>
-                    <input  required type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="Masukkan Hari">
+                    <input  required type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="${message(code: 'input.placeholder.hari')}">
+
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.jam"/></label>
-                    <input required type="time" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="Masukkan Hari">
+                    <input required type="time" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="${message(code: 'input.placeholder.jam')}">
+
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.tahunAkademik"/></label>

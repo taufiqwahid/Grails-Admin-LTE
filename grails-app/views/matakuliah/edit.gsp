@@ -23,15 +23,15 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.matakuliah"/></label>
-                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah" value="${matkul.nama}"/>
+                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.name')}" value="${matkul.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.bebanSks"/></label>
-                    <g:textField type="number" required="" name="sks" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jumlah SKS" value="${matkul.sks}"/>
+                    <g:textField type="number" required="" name="sks" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.matakuliah')}" value="${matkul.sks}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.semester"/></label>
-                    <g:textField type="text" required="" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester" value="${matkul.semester}"/>
+                    <g:textField type="text" required="" name="semester" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.semester')}" value="${matkul.semester}"/>
                 </div>
             </div>
             <!-- /.card-body -->
@@ -48,7 +48,7 @@
             </g:if>
             <div class="card-footer float-right">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="Update" class="btn btn-success"/>
+                <g:actionSubmit  value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-success"/>
                 <g:actionSubmit action="index" value="Batal" class="btn btn-danger"/>
             </div>
         </g:form>

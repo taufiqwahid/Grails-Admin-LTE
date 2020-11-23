@@ -19,27 +19,53 @@
         </div>
     <!-- /.card-header -->
     <!-- form start -->
+
+
         <g:form controller="mahasiswa" action="save" method="POST">
+
             <div class="card-body">
-                <div class="form-group">
+                <div class="form-group" >
                     <label for="exampleInputEmail1"><g:message code="form.label.nama"/></label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama"/>
+                    <g:textField type="text" value="${fieldValue(bean:mahasiswa ,field:'nama')}" name="nama" class="form-control" id="exampleInputEmail1 createNama" placeholder="${message(code: 'input.placeholder.nama')}/>
+                    <g:hasErrors bean="${mahasiswa}" field="nama">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.nip"/></label>
-                    <g:textField type="text" name="nim" class="form-control" id="exampleInputEmail1" placeholder="Masukkan NIM"/>
+                    <g:textField type="text" value="${fieldValue(bean: mahasiswa, field: 'nim')}" name="nim" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nim')}"/>
+                    <g:hasErrors bean="${mahasiswa}" field="nim">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.alamat"/></label>
-                    <g:textField type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Alamat"/>
-                </div>
+                    <g:textField type="text" value="${fieldValue(bean: mahasiswa, field: 'alamat')}" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.alamat')}"/>
+                    <g:hasErrors bean="${mahasiswa}" field="alamat">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>                </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.tglLahir"/></label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tglLahir" class="form-control"  placeholder="Masukkan anggal Lahir">
-                </div>
+                    <input type="date" class="form-control" value="${fieldValue(bean: mahasiswa, field: 'tglLahir')}" id="exampleInputEmail1" aria-describedby="emailHelp" name="tglLahir" class="form-control"  placeholder="${message(code: 'input.placeholder.tglLahir')}">
+                    <g:hasErrors bean="${mahasiswa}" field="tglLahir">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>                </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.notelp"/></label>
-                    <g:textField type="text" name="noTelp" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No Telepon "/>
+                    <g:textField type="number" name="noTelp" value="${fieldValue(bean: mahasiswa, field: 'noTelp')}" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.notelp')}"/>
+                    <g:hasErrors bean="${mahasiswa}" field="noTelp">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                         <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>
@@ -49,6 +75,11 @@
                                 <option value="${jrs.id}">${jrs.nama}</option>
                             </g:each>
                         </select>
+                    <g:hasErrors bean="${mahasiswa}" field="jurusan">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
             </div>
             <!-- /.card-body -->
@@ -65,7 +96,7 @@
             </g:if>
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="save" class="btn btn-primary"/>
+                <g:actionSubmit  value="save" id="createButton"  class="btn btn-primary"/>
             </div>
         </g:form>
     </div>

@@ -36,13 +36,13 @@
                             <strong>Warning</strong> <g:message code="error.message.edit"/>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                            </button>
+                            </button>w
                         </div>
                     </div>
                 </g:if>
                 <div class="card-footer float-right">
                     %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                    <g:actionSubmit value="Update" class="btn btn-success"/>
+                    <g:actionSubmit value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-success"/>
                     <g:actionSubmit action="index" value="Batal" class="btn btn-danger"/>
                 </div>
             </g:form>

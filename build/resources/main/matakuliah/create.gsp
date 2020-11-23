@@ -25,15 +25,30 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.matakuliah"/></label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Matakuliah"/>
+                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.matakuliah')}"/>
+                    <g:hasErrors bean="${matkul}" field="nama">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.bebanSks"/></label>
-                    <g:textField type="number" name="sks" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jumlah SKS"/>
+                    <g:textField type="number" name="sks" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.bebanSks')}"/>
+                    <g:hasErrors bean="${matkul}" field="sks">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.semester"/></label>
-                    <g:textField type="text" name="semester" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Semester"/>
+                    <g:textField type="text" name="semester" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.semester')}"/>
+                    <g:hasErrors bean="${matkul}" field="semester">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
 
             </div>

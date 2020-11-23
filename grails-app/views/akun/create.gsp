@@ -24,11 +24,21 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
-                        <g:textField type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Username"/>
+                        <g:textField type="text" value="${fieldValue(bean: akun, field: 'username')}" name="username" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.username')}"/>
+                        <g:hasErrors bean="${akun}" field="username">
+                            <div class="text-danger">
+                                <g:message code="error.message.textField"/>
+                            </div>
+                        </g:hasErrors>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.password"/></label>
-                        <g:textField type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Password"/>
+                        <g:textField type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.password')}"/>
+                        <g:hasErrors bean="${akun}" field="password">
+                            <div class="text-danger">
+                                <g:message code="error.message.textField"/>
+                            </div>
+                        </g:hasErrors>
                     </div>
                 </div>
                 <!-- /.card-body -->

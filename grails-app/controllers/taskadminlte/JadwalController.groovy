@@ -23,13 +23,14 @@ class JadwalController {
         ]
     }
     def save(){
-        def pa = new Jadwal(params)
-        if (pa.validate()){
-            pa.save flush:true, failOnError:true
+        def jadwal = new Jadwal(params)
+        if (jadwal.validate()){
+            jadwal.save flush:true, failOnError:true
             redirect action: 'index', controller: 'jadwal', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
             redirect action: 'create', controller: 'jadwal', params: [lang: params.lang]
+            render(view: 'create', controller:'jadwal', params:[lang: params.lang], model: [jadwal: jadwal])
         }
     }
     @Secured(['ROLE_ADMIN'])

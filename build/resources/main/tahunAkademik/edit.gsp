@@ -44,7 +44,7 @@
                         <option value="2024">2024</option>
                         <option value="2025">2025</option>
                     </select>
-                    <g:actionSubmit value="save" class="btn btn-success my-1"/>
+                    <g:actionSubmit value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-success my-1"/>
                 </g:form>
             </div>
         </div>

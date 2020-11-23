@@ -23,11 +23,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.nama"/> <g:message code="form.label.jurusan"/></label>
-                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" value="${jurusan.nama}"/>
+                    <g:textField type="text" required="" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nama')}" value="${jurusan.nama}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.fakultas"/></label>
-                    <g:textField type="text" required="" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Fakultas" value="${jurusan.fakultas}"/>
+                    <g:textField type="text" required="" name="fakultas" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.fakultas')}" value="${jurusan.fakultas}"/>
                 </div>
             </div>
             <!-- /.card-body -->
@@ -45,7 +45,7 @@
 
             <div class="card-footer float-right">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="Update" class="btn btn-success"/>
+                <g:actionSubmit value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-success"/>
                 <g:actionSubmit action="index" value="Batal" class="btn btn-danger"/>
             </div>
         </g:form>

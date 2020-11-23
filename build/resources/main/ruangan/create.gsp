@@ -22,7 +22,12 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.ruangan"/></label>
-                    <g:textField type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Ruangan"/>
+                    <g:textField type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.ruangan')}"/>
+                    <g:hasErrors bean="${ruangan}" field="kode">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>

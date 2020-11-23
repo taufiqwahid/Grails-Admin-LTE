@@ -39,13 +39,15 @@ class RuanganController {
     }
 
     def save(){
+        def matkul = Matakuliah.list()
+        def jurusan = Jurusan.list()
         def ruangan = new Ruangan(params)
         if (ruangan.validate()){
             ruangan.save flush:true, failOnError:true
             redirect action: 'index', controller: 'ruangan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create', controller: 'ruangan', params: [lang: params.lang]
+            render view: 'create', controller: 'ruangan', params: [lang: params.lang], model: [ruangan: ruangan, matkul: matkul, jurusan: jurusan]
         }
     }
     def delete(){

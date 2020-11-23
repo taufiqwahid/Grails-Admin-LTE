@@ -61,7 +61,7 @@
 
                                             <td class="text-center">
                                                 <a class="btn btn-warning text-light" href="${createLink(params: [lang:params.lang],id: rgn.id, action: 'edit', controller:'ruangan')}" ><i class="far fa-edit"></i></a>
-                                                <a class="btn btn-danger text-light" href="${createLink(params: [lang:params.lang], id: rgn.id, action: 'delete', controller:'ruangan')}" ><i class="far fa-trash-alt"></i></a>
+                                                <a class="btn btn-danger text-light" onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang], id: rgn.id, action: 'delete', controller:'ruangan')}" ><i class="far fa-trash-alt"></i></a>
                                             </td>
                                         </sec:ifAllGranted>
                                 </tr>

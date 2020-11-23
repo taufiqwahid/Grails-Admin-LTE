@@ -37,10 +37,10 @@ class JurusanController {
         def jurusan = new Jurusan(params)
         if (jurusan.validate()){
             jurusan.save flush:true, failOnError:true
-            redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
+            redirect action: 'index', controller:'jurusan', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create', controller: 'jurusan', params: [lang: params.lang]
+            render( view: 'create', controller: 'jurusan', params: [lang: params.lang], model:[jurusan: jurusan])
         }
 
     }

@@ -43,7 +43,7 @@ class NilaiController {
             redirect action: 'index', controller: 'nilai', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create', controller: 'nilai', params: [lang: params.lang]
+            render(view: 'create', controller:'nilai', params:[lang: params.lang], model: [nilai: nilai])
         }
     }
     def delete(){

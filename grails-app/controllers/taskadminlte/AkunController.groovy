@@ -20,7 +20,7 @@ class AkunController {
             redirect action: 'index'
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create'
+            render view: 'create', controller:'akun', params:[lang:params.lang], model: [akun: user]
         }
 
     }

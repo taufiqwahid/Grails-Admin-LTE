@@ -66,8 +66,8 @@
 
                                         <td class="text-center">
 %{--                                        <div class="btn btn-warning" class="btn btn-warning"><g:link action="edit" class="text-light" id="${mhs.id}"><i class="far fa-edit"></i></g:link></div>--}%
-                                            <a class="btn btn-warning text-light" href="${createLink(params: [lang:params.lang],id: mhs.id, action: 'edit', controller:'mahasiswa')}" ><i class="far fa-edit"></i></a>
-                                            <a class="btn btn-danger text-light" href="${createLink(params: [lang:params.lang], id: mhs.id, action: 'delete', controller:'mahasiswa')}" ><i class="far fa-trash-alt"></i></a>
+                                            <a class="btn btn-warning text-light" onclick="return confirm('Yakin Ingin Mengedit Data ini')" href="${createLink(params: [lang:params.lang],id: mhs.id, action: 'edit', controller:'mahasiswa')}" ><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-danger text-light" onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang], id: mhs.id, action: 'delete', controller:'mahasiswa')}" ><i class="far fa-trash-alt"></i></a>
 %{--                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mhs.id}"><i class="far fa-trash-alt"></i></g:link></div>--}%
                                         </td>
                                     </sec:ifAllGranted>

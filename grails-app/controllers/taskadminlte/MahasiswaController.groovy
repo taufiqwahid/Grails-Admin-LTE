@@ -13,7 +13,6 @@ class MahasiswaController {
 
     def create(){
         def jurusan = Jurusan.list()
-
         [jurusan: jurusan]
     }
     @Secured(['ROLE_ADMIN'])
@@ -42,8 +41,9 @@ class MahasiswaController {
             mahasiswa.save flush:true, failOnError:true
             redirect action: 'index', controller:'mahasiswa', params: [lang: params.lang]
         }else {
+            def jurusan = Jurusan.list()
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create', controller: 'mahasiswa', params: [lang: params.lang]
+            render( view: 'create', controller: 'mahasiswa', params: [lang: params.lang], model:[mahasiswa: mahasiswa, jurusan: jurusan])
         }
     }
     def delete(){

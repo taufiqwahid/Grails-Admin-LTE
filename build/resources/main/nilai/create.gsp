@@ -40,11 +40,21 @@
 
         <div class="form-group">
           <label for="exampleInputEmail1"><g:message code="form.label.nilaiUts"/></label>
-          <g:textField type="text" name="uts" class="form-control" id="exampleInputEmail1" placeholder="Masukkan UTS "/>
+          <g:textField type="text" name="uts" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nilaiUts')} "/>
+          <g:hasErrors bean="${nilai}" field="uts">
+            <div class="text-danger">
+              <g:message code="error.message.textField"/>
+            </div>
+          </g:hasErrors>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1"><g:message code="form.label.nilaiUas"/></label>
-          <g:textField type="text" name="uas" class="form-control" id="exampleInputEmail1" placeholder="Masukkan UAS"/>
+          <g:textField type="text" name="uas" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nilaiUas')}"/>
+          <g:hasErrors bean="${nilai}" field="uas">
+            <div class="text-danger">
+              <g:message code="error.message.textField"/>
+            </div>
+          </g:hasErrors>
         </div>
       </div>
       <!-- /.card-body -->

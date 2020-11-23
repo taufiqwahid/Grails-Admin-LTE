@@ -35,12 +35,13 @@ class MataKuliahController {
         def matkul = new Matakuliah(params)
         if (matkul.validate()){
             matkul.save flush:true, failOnError:true
-            redirect action: 'index', controller: 'mataKuliah', params: [lang: params.lang]
+            redirect action: 'index', controller:'matkul', params: [lang: params.lang]
         }else {
             flash.message =  "Pastikan inputan formnya terisi semua !"
-            redirect action: 'create', controller: 'mataKuliah', params: [lang: params.lang]
+            render( view: 'create', controller: 'matkul', params: [lang: params.lang], model:[matkul: matkul])
         }
     }
+
     def delete(){
         def matkul = Matakuliah.get(params.id)
         try{

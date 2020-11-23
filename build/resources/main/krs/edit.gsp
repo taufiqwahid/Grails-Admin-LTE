@@ -73,7 +73,7 @@
             </g:if>
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="save" class="btn btn-primary"/>
+                <g:actionSubmit value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-primary"/>
             </div>
         </g:form>
     </div>

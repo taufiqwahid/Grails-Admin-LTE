@@ -3,6 +3,7 @@ package taskadminlte
 class LoginController {
 
     def index() {
+
         redirect controller: 'login', action: 'auth'
     }
     def cekLogin(){

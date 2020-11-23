@@ -9,12 +9,12 @@ class DosenController {
         def dosen = Dosen.list()
         [dosen: dosen]
     }
-    @Secured(['ROLE_ADMIN'])
+
     def create(){
         def jurusan = Jurusan.list()
         [jurusan: jurusan]
     }
-    @Secured(['ROLE_ADMIN'])
+
     def edit(){
         def dosen = Dosen.get(params.id)
         def jurusan = Jurusan.list()
@@ -37,11 +37,14 @@ class DosenController {
         def dosen = new Dosen(params)
         if (dosen.validate()){
             dosen.save flush:true, failOnError:true
-            redirect action: 'index', controller:'dosen', params:[lang:params.lang]
+            redirect action: 'index', controller:'dosen', params: [lang: params.lang]
         }else {
-            flash.message =  "failed save"
-            redirect action: 'create', controller:'dosen', params:[lang:params.lang]
+            def jurusan = Jurusan.list()
+            flash.message =  "Pastikan inputan formnya terisi semua !"
+            render( view: 'create', controller: 'dosen', params: [lang: params.lang], model:[dosen: dosen, jurusan: jurusan])
         }
+
+
     }
     def delete(){
         def dosen = Dosen.get(params.id)

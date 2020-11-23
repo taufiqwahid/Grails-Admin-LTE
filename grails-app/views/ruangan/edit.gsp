@@ -23,7 +23,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.ruangan"/></label>
-                    <g:textField  required="" type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Ruangan" value="${ruangan.kode}"/>
+                    <g:textField  required="" type="text" name="kode" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.ruangan')}" value="${ruangan.kode}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>
@@ -58,7 +58,7 @@
             </g:if>
             <div class="card-footer float-right">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="Update" class="btn btn-success"/>
+                <g:actionSubmit value="Update" onclick="return confirm('${message(code: 'alert.message.edit')}')" class="btn btn-success"/>
                 <g:actionSubmit action="index" value="Batal" class="btn btn-danger"/>
             </div>
         </g:form>

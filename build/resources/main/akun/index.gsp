@@ -28,12 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.akun"/> </h3>
-<sec:ifAllGranted roles="ROLE_ADMIN">
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <g:link action="create">
+                         <g:link action="create" params="[lang:params.lang]">
                             <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="form.label.tambah"/> </button>
                         </g:link>
-</sec:ifAllGranted>
+                        </sec:ifAllGranted>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
