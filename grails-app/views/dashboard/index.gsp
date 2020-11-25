@@ -21,10 +21,10 @@
                 <div class="small-box bg-info">
                     <div class="inner text-navy">
                         <h5><g:message code="dashboard.card.akun"/></h5>
-                        <h3>${Dosen}</h3>
+                        <h4 class="text-white"><sec:username/></h4>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-list-alt"></i>
+                        <i class="fa fa-user-astronaut"></i>
                     </div>
                     <a href="${createLink(params: [lang: params.lang],controller: 'mhsAkun')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     %{--                <g:link controller="dosen" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></g:link>--}%
@@ -36,10 +36,10 @@
                 <div class="small-box bg-success">
                     <div class="inner">
                         <h5><g:message code="dashboard.card.krs"/></h5>
-                        <h3>${Mahasiswa}</h3>
+                        <h3>${mhsKrs}</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-users"></i>
+                        <i class="fa fa-list-ul"></i>
                     </div>
                     <a href="${createLink(params: [lang: params.lang],controller: 'mhsKrs')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
@@ -52,10 +52,10 @@
                     <div class="inner text-navy">
                         <h5><g:message code="dashboard.card.khs"/></h5>
 
-                        <h3>${Matakuliah}</h3>
+                        <h3>${mhsKhs}</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-laptop-house"></i>
+                        <i class="fa fa-list-alt"></i>
                     </div>
                     <a href="${createLink(params: [lang: params.lang],controller: 'mhsKhs')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
@@ -67,10 +67,10 @@
                 <div class="small-box bg-danger">
                     <div class="inner">
                         <h5><g:message code="dashboard.card.jadwal"/></h5>
-                        <h3>${Ruangan}</h3>
+                        <h3>${mhsJadwal}</h3>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-laptop-house"></i>
+                        <i class="fa fa-list-ol"></i>
                     </div>
                     <a href="${createLink(params: [lang: params.lang],controller: 'jadwal')}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>

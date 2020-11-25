@@ -12,6 +12,7 @@ class JadwalController {
     }
     def create(){
         def dosen = Dosen.list()
+        def mahasiswa = Mahasiswa.list()
         def matkul = Matakuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()
@@ -19,7 +20,8 @@ class JadwalController {
                 dosen: dosen,
                 matkul: matkul,
                 tahunAkademik: tahunAkademik,
-                ruangan: ruangan
+                ruangan: ruangan,
+                mahasiswa: mahasiswa
         ]
     }
     def save(){
@@ -37,6 +39,7 @@ class JadwalController {
     def edit(){
         def jadwal = Jadwal.get(params.id)
         def dosen = Dosen.list()
+        def mahasiswa = Mahasiswa.list()
         def matkul = Matakuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()
@@ -44,7 +47,8 @@ class JadwalController {
                 dosen: dosen,
                 matkul: matkul,
                 tahunAkademik: tahunAkademik,
-                ruangan: ruangan
+                ruangan: ruangan,
+                mahasiswa: mahasiswa
         ]
     }
     def update(){

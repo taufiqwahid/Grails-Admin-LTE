@@ -1,9 +1,14 @@
 package taskadminlte
 
+import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(['ROLE_ADMIN','ROLE_USER','ROLE_MAHASISWA'])
+
 class DashboardController {
+
+    SpringSecurityService springSecurityService
+
     def index() {
 
         println(params)
@@ -18,6 +23,15 @@ class DashboardController {
         def PenasehatAkademik = PenasehatAkademik.list().size()
         def Ruangan = Ruangan.list().size()
         def TahunAkademik = TahunAkademik.list().size()
+
+        def username = springSecurityService.principal.username
+        def mahasiswa = taskadminlte.Mahasiswa.findByNama(username)
+
+
+        def mhsJadwal = taskadminlte.Jadwal.findAllByMahasiswa(mahasiswa).size()
+        def mhsKrs = taskadminlte.Krs.findAllByMahasiswa(mahasiswa).size()
+        def mhsKhs = taskadminlte.Nilai.findAllByMahasiswa(mahasiswa).size()
+
         [
                 Akun : Akun,
                 Dosen : Dosen,
@@ -30,6 +44,11 @@ class DashboardController {
                 PenasehatAkademik : PenasehatAkademik,
                 Ruangan : Ruangan,
                 TahunAkademik : TahunAkademik,
+
+                mhsJadwal : mhsJadwal,
+                mhsKrs : mhsKrs,
+                mhsKhs : mhsKhs,
+
         ]
     }
 }

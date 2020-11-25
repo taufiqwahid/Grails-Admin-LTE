@@ -22,6 +22,15 @@
         <g:form controller="jadwal" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
+                    <label for="exampleFormControlSelect"><g:message code="form.label.nama"/> <g:message code="form.label.mahasiswa"/></label>
+                    <select name="mahasiswa" class="form-control" id="exampleFormControlSelect">
+                        <option value="NULL">Pilih...</option>
+                        <g:each in="${mahasiswa}" var="mhs">
+                            <option value="${mhs.id}">${mhs.nama}</option>
+                        </g:each>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.nama"/> <g:message code="form.label.dosen"/></label>
                     <select name="dosen" class="form-control" id="exampleFormControlSelect1">
                         <option value="NULL">Pilih...</option>

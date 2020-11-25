@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsKrs', action: 'index')}" class="nav-link text-light">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsKhs', action: 'index')}" class="nav-link text-light">
                             <i class="fa fa-user-graduate"></i>
                             <p>
                                 <g:message code="sidebar.navlink.khs"/>
@@ -65,6 +65,7 @@
                             </p>
                         </a>
                     </li>
+
                 </sec:ifAllGranted>
             <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
 

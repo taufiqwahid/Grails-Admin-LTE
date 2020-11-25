@@ -10,22 +10,18 @@
 
 %{----}%
 
-<div class="container-fluid d-flex justify-content-center">
-    <div class="row">
-        <div class="col col-12">
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 align-self-center">
 
             <!-- Profile Image -->
             <div class="card card-primary card-outline">
                 <div class="card-body box-profile">
                     <div class="text-center">
-                        <img class="profile-user-img img-fluid img-circle"
-                             src="../../dist/img/user4-128x128.jpg"
-                             alt="User profile picture">
+                        <i class="fa fa-user-astronaut fa-4x"></i>
                     </div>
-                    <h3 class="profile-username text-center">${mhsAkun.username}</h3>
-
+                    <h3 class="profile-username text-center">${mhsAkun.nama}</h3>
                     <p class="text-muted text-center">${mhsAkun.jurusan.nama}</p>
-
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -38,27 +34,18 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-
                     <strong><i class="fas fa-book mr-1"></i> <g:message code="form.label.alamat"/> </strong>
-
                     <p class="text-muted">
                         ${mhsAkun.alamat}
                     </p>
-
                     <hr>
-
                     <strong><i class="fas fa-map-marker-alt mr-1"></i> <g:message code="form.label.tglLahir"/> </strong>
-
                     <p class="text-muted">${mhsAkun.tglLahir}</p>
-
                     <hr>
-
                     <strong><i class="fas fa-map-marker-alt mr-1"></i> <g:message code="form.label.notelp"/> </strong>
-
                     <p class="text-muted">${mhsAkun.noTelp}</p>
-
                     <hr>
-                <a class="btn btn-primary btn-block text-light" onclick="return confirm('Yakin Ingin Mengedit Data ini')" href="${createLink(params: [lang:params.lang], action: 'update', controller:'mhsAkun')}" ><i class="far fa-edit"></i></a>
+                <a class="btn btn-primary btn-block text-light" onclick="return confirm(${message(code: 'alert.message.edit')})" href="${createLink(params: [lang:params.lang], action: 'update', controller:'mhsAkun')}" ><i class="far fa-edit"></i></a>
 
                 </div>
                 <!-- /.card-body -->

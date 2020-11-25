@@ -2,7 +2,8 @@ package mahasiswa
 
 import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
-import taskadminlte.MhsAkun
+import taskadminlte.Krs
+import taskadminlte.Mahasiswa
 
 @Secured(['ROLE_MAHASISWA'])
 class MhsKrsController {
@@ -10,8 +11,12 @@ class MhsKrsController {
 
     def index() {
         def username = springSecurityService.principal.username
-        def mhsAkun = MhsAkun.findByUsername(username)
-        println(mhsAkun)
-        [mhsAkun:mhsAkun]
+        def mahasiswa = Mahasiswa.findByNama(username)
+        def mhsKrs = Krs.findAllByMahasiswa(mahasiswa)
+        [mhsKrs:mhsKrs]
    }
 }
+
+
+
+

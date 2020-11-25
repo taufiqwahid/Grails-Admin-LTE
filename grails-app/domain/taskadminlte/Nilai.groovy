@@ -2,12 +2,11 @@ package taskadminlte
 
 class Nilai {
     Matakuliah matakuliah
-    String nim
+    Mahasiswa mahasiswa
     String uts
     String uas
 
     static constraints = {
-        nim nullable: false
         uts nullable: false
         uas nullable: false
     }

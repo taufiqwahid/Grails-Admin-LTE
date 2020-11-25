@@ -32,8 +32,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.nim"/></label>
-                    <select name="nim" required="" class="form-control" id="exampleFormControlSelect7">
-                        <option selected disabled value="${mahasiswa.id}">${nilai.nim}</option>
+                    <select name="mahasiswa" required="" class="form-control" id="exampleFormControlSelect7">
+                        <option selected disabled value="${mahasiswa.id}">${nilai.mahasiswa.nim}</option>
                         <g:each in="${mahasiswa}" var="mhs">
                             <option value="${mhs.id}">${mhs.nim}</option>
                         </g:each>

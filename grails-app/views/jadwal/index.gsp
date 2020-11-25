@@ -42,8 +42,9 @@
                             <thead>
                             <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th><g:message code="table.head.nama" /></th>
+                                <th><g:message code="table.head.mahasiswa" /></th>
                                 <th><g:message code="table.head.matakuliah" /></th>
+                                <th><g:message code="table.head.dosen" /></th>
                                 <th><g:message code="table.head.hari" /></th>
                                 <th><g:message code="table.head.jam" /></th>
                                 <th><g:message code="table.head.tahunAkademik" /></th>
@@ -58,8 +59,9 @@
                             <g:each in="${jadwal}" var="jdw">
                                 <tr>
                                     <td class="text-center">${jdw.id}</td>
-                                    <td>${jdw.dosen.nama}</td>
+                                    <td>${jdw.mahasiswa.nama}</td>
                                     <td>${jdw.matakuliah.nama}</td>
+                                    <td>${jdw.dosen.nama}</td>
                                     <td>${jdw.hari}</td>
                                     <td>${jdw.jam}</td>
                                     <td>${jdw.tahunAkademik.priode}</td>

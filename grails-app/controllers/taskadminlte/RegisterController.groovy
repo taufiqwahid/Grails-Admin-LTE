@@ -14,7 +14,7 @@ class RegisterController {
         if (user.validate()){
 
 //        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
-        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
+        def userRole = Role.findOrSaveWhere(authority: 'ROLE_ADMIN')
             user.save flush:true, failOnError:true
 //            mhsAkun.save flush:true, failOnError:true
         if (!user.authorities.contains(userRole)){

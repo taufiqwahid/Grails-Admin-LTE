@@ -1,6 +1,7 @@
 package taskadminlte
 
 class Jadwal {
+    Mahasiswa mahasiswa
     Dosen dosen
     Matakuliah matakuliah
     String hari

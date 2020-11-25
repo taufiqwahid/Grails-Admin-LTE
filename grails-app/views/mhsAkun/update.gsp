@@ -21,7 +21,7 @@
     <!-- form start -->
 
 
-        <g:form controller="mhsAkun" method="POST">
+        <g:form controller="mhsAkun" action="updateAkun" method="POST" id="${mhsAkun.id}">
             <div class="card-body">
                 <div class="form-group" >
                     <label for="exampleInputEmail1"><g:message code="form.label.nama"/></label>
@@ -81,24 +81,7 @@
                         </div>
                     </g:hasErrors>
                 </div>
-                <div class="form-group" >
-                    <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
-                    <g:textField type="text"  value="${fieldValue(bean:mhsAkun ,field:'username')}" name="nama" class="form-control" id="exampleInputEmail1 createNama" placeholder="${message(code: 'input.placeholder.nama')}"/>
-                    <g:hasErrors bean="${mhsAkun}" field="nama">
-                        <div class="text-danger">
-                            <g:message code="error.message.textField"/>
-                        </div>
-                    </g:hasErrors>
-                </div>
-                <div class="form-group" >
-                    <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
-                    <g:textField type="text" value="${fieldValue(bean:mhsAkun ,field:'password')}" name="nama" class="form-control" id="exampleInputEmail1 createNama" placeholder="${message(code: 'input.placeholder.nama')}"/>
-                    <g:hasErrors bean="${mhsAkun}" field="nama">
-                        <div class="text-danger">
-                            <g:message code="error.message.textField"/>
-                        </div>
-                    </g:hasErrors>
-                </div>
+
             </div>
             <!-- /.card-body -->
             <g:if test="${flash.message}">
@@ -114,8 +97,8 @@
             </g:if>
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit  action="save" value="save" class="btn btn-warning"/>
-                <a class="btn btn-primary text-light" onclick="return confirm('${message(code: 'alert.message.edit')}')" href="${createLink(params: [lang:params.lang], id: mhsAkun.id, action: 'updateAkun', controller:'mhsAkun')}" >Update Data</i></a>
+                <g:actionSubmit value="Update" class="btn btn-primary"/>
+                <a class="btn btn-warning text-light" href="${createLink(params: [lang:params.lang], action: 'index', controller:'mhsAkun')}" >Cancel</a>
             </div>
         </g:form>
     </div>

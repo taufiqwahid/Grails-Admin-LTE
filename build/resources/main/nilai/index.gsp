@@ -42,7 +42,7 @@
                         <tr class="table-primary">
                                 <th class="text-center">#</th>
                                 <th><g:message code="table.head.matakuliah"/> </th>
-                                <th><g:message code="table.head.nip"/> </th>
+                                <th><g:message code="table.head.nim"/> </th>
                                 <th><g:message code="table.head.nilaiUts"/> </th>
                                 <th><g:message code="table.head.nilaiUas"/> </th>
                             <sec:ifAllGranted roles="ROLE_ADMIN">
@@ -56,7 +56,7 @@
                                 <tr>
                                     <td class="text-center">${n.id}</td>
                                     <td>${n.matakuliah.nama}</td>
-                                    <td>${n.nim}</td>
+                                    <td>${n.mahasiswa.nim}</td>
                                     <td>${n.uts}</td>
                                     <td>${n.uas}</td>
                                 <sec:ifAllGranted roles="ROLE_ADMIN">
