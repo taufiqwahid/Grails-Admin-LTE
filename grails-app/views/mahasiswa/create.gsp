@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.alamat"/></label>
                     <g:textField type="text" value="${fieldValue(bean: mahasiswa, field: 'alamat')}" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.alamat')}"/>
-                    <g:hasErrors bean="${mahasiswa}" field="alamat">
+                    <g:hasErrors bean="${mahasiswa}" field="alamat">w
                         <div class="text-danger">
                             <g:message code="error.message.textField"/>
                         </div>
@@ -95,7 +95,7 @@
             </g:if>
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit  value="save" id="createButton"  class="btn btn-primary"/>
+                <g:actionSubmit  value="save" class="btn btn-primary"/>
             </div>
         </g:form>
     </div>

@@ -22,13 +22,14 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.nama"/></label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nama')}"/>
+                    <g:textField type="text" value="${fieldValue(bean: dosen, field: 'nama')}" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nama')}"/>
                     <g:hasErrors bean="${dosen}" field="nama">
                         <div class="text-danger">
                             <g:message code="error.message.textField"/>
                         </div>
                     </g:hasErrors>
                 </div>
+
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.nip"/></label>
                     <g:textField type="text" name="nip" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.nip')}"/>
@@ -51,6 +52,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.jurusan"/></label>
                     <select name="jurusan" class="form-control" id="exampleFormControlSelect1">
+                        <option value="NULL">Pilih...</option>
                         <g:each in="${jurusan}" var="jrs">
                             <option value="${jrs.id}">${jrs.nama}</option>
                         </g:each>

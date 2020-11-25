@@ -18,14 +18,11 @@
         </div>
     <!-- /.card-header -->
     <!-- form start -->
-        <g:if test="${flash.message}">
-            <br/><div class="text-center text-red" role="status">${flash.message}</div>
-        </g:if>
         <g:form controller="mataKuliah" action="save" method="POST">
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.matakuliah"/></label>
-                    <g:textField type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.matakuliah')}"/>
+                    <g:textField type="text" name="nama" value="${fieldValue(bean: matkul, field: 'nama')}" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.matakuliah')}"/>
                     <g:hasErrors bean="${matkul}" field="nama">
                         <div class="text-danger">
                             <g:message code="error.message.textField"/>
@@ -66,7 +63,7 @@
             </g:if>
             <div class="card-footer">
                 %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                <g:actionSubmit value="save" class="btn btn-primary"/>
+                <g:actionSubmit value="save" params class="btn btn-primary"/>
             </div>
         </g:form>
     </div>

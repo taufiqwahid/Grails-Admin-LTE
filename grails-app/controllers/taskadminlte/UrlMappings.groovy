@@ -40,6 +40,10 @@ class UrlMappings {
         "/$lang?/tahunakademik/$action?"(controller: "tahunAkademik")
         "/$lang?/ruangan/$action?"(controller: "ruangan")
         "/$lang?/akun/$action?"(controller: "akun")
+        "/$lang?/mhsAkun/$action?"(controller: "mhsAkun")
+        "/$lang?/mhsJadwal/$action?"(controller: "mhsJadwal")
+        "/$lang?/mhsKrs/$action?"(controller: "mhsKrs")
+        "/$lang?/mhsKhs/$action?"(controller: "mhsKhs")
 
 //
         "/$lang?/mahasiswa/$action?/$id?"(controller: "mahasiswa")
@@ -53,10 +57,10 @@ class UrlMappings {
         "/$lang?/tahunakademik/$action?/$id?"(controller: "tahunAkademik")
         "/$lang?/ruangan/$action?/$id?"(controller: "ruangan")
         "/$lang?/akun/$action?/$id?"(controller: "akun")
-
-
-
-
+        "/$lang?/mhsAkun/$action?/$id?"(controller: "mhsAkun")
+        "/$lang?/mhsJadwal/$action?/$id?"(controller: "mhsJadwal")
+        "/$lang?/mhsKrs/$action?/$id?"(controller: "mhsKrs")
+        "/$lang?/mhsKhs/$action?/$id?"(controller: "mhsKhs")
 
 
 //        "/$lang/dosen"{

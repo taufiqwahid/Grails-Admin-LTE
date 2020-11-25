@@ -59,7 +59,7 @@
                     <g:actionSubmit value="Sign In" class="btn btn-primary btn-block"/>
                 </div><br/>
                 <p>- OR -</p>
-                <g:link controller="register" action="index" class="btn btn-light btn-block">Sign Out</g:link>
+                <g:link controller="register" action="index" class="btn btn-light btn-block">Sign Up</g:link>
 
             </div>
                 </g:form>

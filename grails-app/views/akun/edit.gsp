@@ -17,7 +17,7 @@
             </div>
         <!-- /.card-header -->
         <!-- form start -->
-            <g:form controller="akun" action="update" method="POST" id="${akun.id}">
+            <g:form controller="akun" action="update" method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>

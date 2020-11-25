@@ -7,12 +7,11 @@ class Mahasiswa {
     String tglLahir
     String noTelp
     Jurusan jurusan
-
     static constraints = {
         nama nullable: false
-        nim nullable: false
-        alamat nullable: false
-        tglLahir nullable: false
-        noTelp nullable: false
+         nim nullable: false
+         alamat nullable: false
+         tglLahir nullable: false
+         noTelp nullable: false
     }
 }

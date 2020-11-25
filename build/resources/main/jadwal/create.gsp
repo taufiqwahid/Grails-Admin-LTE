@@ -14,7 +14,7 @@
 <div class="container">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.matakuliah"/></h3>
+            <h3 class="card-title"><g:message code="form.label.tambah"/> <g:message code="form.label.jadwal"/></h3>
         </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -24,6 +24,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.nama"/> <g:message code="form.label.dosen"/></label>
                     <select name="dosen" class="form-control" id="exampleFormControlSelect1">
+                        <option value="NULL">Pilih...</option>
                         <g:each in="${dosen}" var="dsn">
                             <option value="${dsn.id}">${dsn.nama}</option>
                         </g:each>
@@ -39,13 +40,21 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.hari"/></label>
-                    <input  required type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="${message(code: 'input.placeholder.hari')}">
-
+                    <input  required type="date" value="${fieldValue(bean: jadwal, field: 'hari')}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hari" class="form-control"  placeholder="${message(code: 'input.placeholder.hari')}">
+                    <g:hasErrors bean="${jadwal}" field="hari">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1"><g:message code="form.label.jam"/></label>
-                    <input required type="time" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="${message(code: 'input.placeholder.jam')}">
-
+                    <input required type="time" value="${fieldValue(bean: jadwal, field: 'jam')}" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="jam" class="form-control"  placeholder="${message(code: 'input.placeholder.jam')}">
+                    <g:hasErrors bean="${jadwal}" field="jam">
+                        <div class="text-danger">
+                            <g:message code="error.message.textField"/>
+                        </div>
+                    </g:hasErrors>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><g:message code="form.label.tahunAkademik"/></label>

@@ -27,12 +27,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.mahasiswa"/> </h2>
-<sec:ifAllGranted roles="ROLE_ADMIN">
+                    <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <g:link action="create" params="[lang: params.lang]">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
-                        </g:link>
-</sec:ifAllGranted>
+                        <g:link action="create" params="[lang: params.lang]">
+                                                <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
+                                            </g:link>
+                    </sec:ifAllGranted>
                     </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -46,10 +46,10 @@
                                     <th><g:message code="table.head.tglLahir"/></th>
                                     <th><g:message code="table.head.notelp"/></th>
                                     <th><g:message code="table.head.jurusan"/></th>
-<sec:ifAllGranted roles="ROLE_ADMIN">
+                                <sec:ifAllGranted roles="ROLE_ADMIN">
 
-    <th class="text-center"><g:message code="table.head.opsi"/></th>
-</sec:ifAllGranted>
+                                    <th class="text-center"><g:message code="table.head.opsi"/></th>
+                                </sec:ifAllGranted>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -66,8 +66,8 @@
 
                                         <td class="text-center">
 %{--                                        <div class="btn btn-warning" class="btn btn-warning"><g:link action="edit" class="text-light" id="${mhs.id}"><i class="far fa-edit"></i></g:link></div>--}%
-                                            <a class="btn btn-warning text-light" onclick="return confirm('Yakin Ingin Mengedit Data ini')" href="${createLink(params: [lang:params.lang],id: mhs.id, action: 'edit', controller:'mahasiswa')}" ><i class="far fa-edit"></i></a>
-                                            <a class="btn btn-danger text-light" onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang], id: mhs.id, action: 'delete', controller:'mahasiswa')}" ><i class="far fa-trash-alt"></i></a>
+                                            <a class="btn btn-warning text-light" onclick="return confirm('Yakin Ingin Mengedit Data ini')" href="${createLink(params: [lang:params.lang, id: mhs.id], action: 'edit', controller:'mahasiswa')}" ><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-danger text-light" onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang, id: mhs.id], action: 'delete', controller:'mahasiswa')}" ><i class="far fa-trash-alt"></i></a>
 %{--                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${mhs.id}"><i class="far fa-trash-alt"></i></g:link></div>--}%
                                         </td>
                                     </sec:ifAllGranted>

@@ -31,8 +31,46 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
+                <sec:ifAllGranted roles="ROLE_MAHASISWA">
+
+                    <li class="nav-item">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsAkun', action: 'index')}" class="nav-link text-light">
+                            <i class="fa fa-user-graduate"></i>
+                            <p>
+                                <g:message code="sidebar.navlink.akun"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsKrs', action: 'index')}" class="nav-link text-light">
+                            <i class="fa fa-user-graduate"></i>
+                            <p>
+                                <g:message code="sidebar.navlink.krs"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsKrs', action: 'index')}" class="nav-link text-light">
+                            <i class="fa fa-user-graduate"></i>
+                            <p>
+                                <g:message code="sidebar.navlink.khs"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsJadwal', action: 'index')}" class="nav-link text-light">
+                            <i class="fa fa-user-graduate"></i>
+                            <p>
+                                <g:message code="sidebar.navlink.jadwal"/>
+                            </p>
+                        </a>
+                    </li>
+                </sec:ifAllGranted>
+            <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
+
+
                 <li class="nav-item">
-                        <a href="${createLink(params:[lang: params.lang], controller: 'dosen', action: 'index')}" class="nav-link text-light">
+                    <a href="${createLink(params:[lang: params.lang], controller: 'dosen', action: 'index')}" class="nav-link text-light">
                         <i class="fa fa-user-graduate"></i>
                         <p>
                             <g:message code="sidebar.navlink.dosen"/>
@@ -41,7 +79,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="${createLink(params: [lang: params.lang], controller: 'mahasiswa', action: 'index')}" class="nav-link text-light">
-                       <i class="fa fa-users"></i>
+                        <i class="fa fa-users"></i>
                         <p>
                             <g:message code="sidebar.navlink.mahasiswa"/>
 
@@ -109,8 +147,8 @@
                         </p>
                     </a>
                 </li>
+            </sec:ifAnyGranted>
             <sec:ifAllGranted roles="ROLE_ADMIN">
-
                 <li class="nav-item">
                     <a href="${createLink(params: [lang: params.lang],controller: 'tahunAkademik', action: 'index')}" class="nav-link text-light">
                         <i class="fas fa-calendar-week"></i>
@@ -130,6 +168,7 @@
                     </a>
                 </li>
             </sec:ifAllGranted>
+
                 <li class="nav-item btn-danger rounded">
                     <a href="${createLink(controller: 'logout', action: 'index')}" class="nav-link text-light">
                     <i class="fas fa-sign-out-alt"></i>

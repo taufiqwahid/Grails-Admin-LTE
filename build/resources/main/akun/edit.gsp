@@ -17,7 +17,7 @@
             </div>
         <!-- /.card-header -->
         <!-- form start -->
-            <g:form controller="akun" action="update" method="POST" id="${akun.id}">
+            <g:form controller="akun" action="update" method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
@@ -36,7 +36,7 @@
                             <strong>Warning</strong> <g:message code="error.message.edit"/>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                            </button>
+                            </button>w
                         </div>
                     </div>
                 </g:if>

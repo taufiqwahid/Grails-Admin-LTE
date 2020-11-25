@@ -20,7 +20,7 @@
         <!-- /.card-header -->
         <!-- form start -->
 
-            <g:form controller="akun" action="save" method="POST">
+            <g:form controller="akun"  action="save" method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.username"/></label>
@@ -33,12 +33,15 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1"><g:message code="form.label.password"/></label>
-                        <g:textField type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.password')}"/>
+                        <g:textField type="text" name="password" value="${fieldValue(bean: akun, field: 'password')}" class="form-control" id="exampleInputEmail1" placeholder="${message(code: 'input.placeholder.password')}"/>
                         <g:hasErrors bean="${akun}" field="password">
                             <div class="text-danger">
                                 <g:message code="error.message.textField"/>
                             </div>
                         </g:hasErrors>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">NOTE : ROLE ACCOUNT = DEFAULT USER  </label>
                     </div>
                 </div>
                 <!-- /.card-body -->
@@ -55,7 +58,7 @@
                 </g:if>
                 <div class="card-footer">
                     %{--                <button type="submit" class="btn btn-primary">Savew</button>--}%
-                    <g:actionSubmit value="save" class="btn btn-primary"/>
+                    <g:actionSubmit value="save" class="btn btn-primary"  />
                 </div>
             </g:form>
         </div>

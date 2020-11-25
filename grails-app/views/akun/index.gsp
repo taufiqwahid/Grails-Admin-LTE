@@ -57,7 +57,7 @@
                                     <sec:ifAllGranted roles="ROLE_ADMIN">
                                         <td class="text-center">
                                             <div class="btn btn-warning"><g:link params="[lang:params.lang]" action="edit" class="text-light" id="${usr.user.id}"><i class="far fa-edit"></i></g:link></div>
-                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" id="${usr.user.id}"><i class="far fa-trash-alt"></i></g:link></div>
+%{--                                            <div class="btn btn-danger"><g:link action="delete" class="text-light" params="[lang: params.lang]" id="${usr.user.id}" ><i class="far fa-trash-alt"></i></g:link></div>--}%
                                         </td>
                                     </sec:ifAllGranted>
 
