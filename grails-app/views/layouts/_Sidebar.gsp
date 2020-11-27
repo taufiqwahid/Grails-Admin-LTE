@@ -34,7 +34,8 @@
                 <sec:ifAllGranted roles="ROLE_MAHASISWA">
 
                     <li class="nav-item">
-                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsAkun', action: 'index')}" class="nav-link text-light">
+                        <!-- Button trigger modal -->
+                        <a href="${createLink(params:[lang: params.lang], controller: 'mhsAkun', action: 'index')}"  class="nav-link text-light">
                             <i class="fa fa-user-graduate"></i>
                             <p>
                                 <g:message code="sidebar.navlink.akun"/>

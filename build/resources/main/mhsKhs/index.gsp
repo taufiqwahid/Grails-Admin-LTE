@@ -28,12 +28,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.nilai"/> </h3>
-                        <sec:ifAllGranted roles="ROLE_ADMIN">
-
-                            <g:link action="create" params="[lang: params.lang]">
-                                <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
-                            </g:link>
-                        </sec:ifAllGranted>
+                        <g:link action="create" params="[lang: params.lang]">
+                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
+                        </g:link>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -55,6 +52,7 @@
                                     <td>${n.mahasiswa.nim}</td>
                                     <td>${n.uts}</td>
                                     <td>${n.uas}</td>
+
                                 </tr>
                             </g:each>
                             </tbody>

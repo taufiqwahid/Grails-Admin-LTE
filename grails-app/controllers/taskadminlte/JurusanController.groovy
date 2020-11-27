@@ -47,13 +47,11 @@ class JurusanController {
 
     def delete(){
         def jurusan = Jurusan.get(params.id)
-        jurusan.delete flush: true, failOnError: true
-        redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
-        try {
+        if (jurusan.validate()){
             jurusan.delete flush: true, failOnError: true
             redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
-        } catch(Exception e){
-            flash.message = "Failed Delete ${e}"
+        } else{
+            flash.message = "Failed Delete"
             redirect action: 'index', controller: 'jurusan', params: [lang: params.lang]
         }
     }

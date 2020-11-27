@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: fairtech
-  Date: 25/11/20
-  Time: 09.55
+  Date: 27/11/20
+  Time: 14.22
 --%>
 
 <g:render template="/layouts/Header"/>
@@ -27,32 +27,32 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.nilai"/> </h3>
+                        <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
                         <g:link action="create" params="[lang: params.lang]">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
+                            <button class="btn m-1 btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.head.krs"/>  </button>
+                        </g:link>
+                        <g:link action="edit" params="[lang: params.lang]">
+                            <button class="btn btn-warning m-1 float-right"><i class="fa fa-plus"></i> <g:message code="default.button.edit.label"/>  </button>
                         </g:link>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table  table-bordered dt-responsive nowrap" style="width:100%">
+                        <table class="table table-bordered dt-responsive nowrap" style="width:100%">
                             <thead class="thead-dark">
                             <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th><g:message code="table.head.matakuliah"/> </th>
-                                <th><g:message code="table.head.nim"/> </th>
-                                <th><g:message code="table.head.nilaiUts"/> </th>
-                                <th><g:message code="table.head.nilaiUas"/> </th>
+                                <th><g:message code="table.head.nama"/> </th>
+                                <th><g:message code="table.head.bebanSks"/> </th>
+                                <th><g:message code="table.head.semester"/></th>
                             </tr>
                             </thead>
                             <tbody>
-                            <g:each in="${nilai}" var="n">
+                            <g:each in="${mhsKrs}" var="mk">
                                 <tr>
-                                    <td class="text-center">${n.id}</td>
-                                    <td>${n.matakuliah.nama}</td>
-                                    <td>${n.mahasiswa.nim}</td>
-                                    <td>${n.uts}</td>
-                                    <td>${n.uas}</td>
-
+                                    <td class="text-center">${mk.id}</td>
+                                    <td>${mk.matakuliah.nama}</td>
+                                    <td>${mk.matakuliah.sks}</td>
+                                    <td>${mk.matakuliah.semester}</td>
                                 </tr>
                             </g:each>
                             </tbody>

@@ -28,6 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
+                        <g:link action="create" params="[lang: params.lang]">
+                            <button class="btn m-1 btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.head.krs"/>  </button>
+                        </g:link>
+                        <g:link action="edit" params="[lang: params.lang]">
+                            <button class="btn btn-warning m-1 float-right"><i class="fa fa-plus"></i> <g:message code="default.button.edit.label"/>  </button>
+                        </g:link>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -38,7 +44,6 @@
                                 <th><g:message code="table.head.nama"/> </th>
                                 <th><g:message code="table.head.bebanSks"/> </th>
                                 <th><g:message code="table.head.semester"/></th>
-
                             </tr>
                             </thead>
                             <tbody>

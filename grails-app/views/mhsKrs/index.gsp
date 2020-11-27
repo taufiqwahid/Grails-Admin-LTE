@@ -8,62 +8,40 @@
 <g:render template="/layouts/Header"/>
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
-
-<!-- Main content -->
-<section class="content">
-    <div class="container-fluid">
-        <g:if test="${flash.message}">
-        %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
-            <div class="container">
-                <div class="alert bg-gradient-danger alert-dismissible fade show" role="alert">
-                    <strong>Danger : </strong> <g:message code="error.message.delete"/>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<!-- Button trigger modal -->
+<button  hidden id="modalPage" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle"><g:message code="modal.message.title"/></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <g:form controller="mhsKrs" action="create">
+            <div class="modal-body">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" required name="semester" id="inlineRadio1" value="ganjil">
+                    <label class="form-check-label" for="inlineRadio1">Semester Ganjil</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="semester" id="inlineRadio2" value="genap">
+                    <label class="form-check-label" for="inlineRadio2">Semester Genap</label>
                 </div>
             </div>
-        </g:if>
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <table class="table table-bordered dt-responsive nowrap" style="width:100%">
-                            <thead class="thead-dark">
-                            <tr class="table-primary">
-                                <th class="text-center">#</th>
-                                <th><g:message code="table.head.nama"/> </th>
-                                <th><g:message code="table.head.bebanSks"/> </th>
-                                <th><g:message code="table.head.semester"/></th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <g:each in="${mhsKrs}" var="mk">
-                                <tr>
-                                    <td class="text-center">${mk.id}</td>
-                                    <td>${mk.matakuliah.nama}</td>
-                                    <td>${mk.matakuliah.sks}</td>
-                                    <td>${mk.matakuliah.semester}</td>
-                                </tr>
-                            </g:each>
-                            </tbody>
-                        </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <g:actionSubmit class="btn btn-primary" action="create" value="submit"/>
+%{--                <button class="btn btn-primary" type="submit"><a class="text-white" href="${createLink(controller: 'mhsKrs', action: 'create', params: [lang:params.lang])}">Submit</a></button>--}%
             </div>
-            <!-- /.col -->
+            </g:form>
+
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
-</section>
-<!-- /.content -->
+</div>
 
 <g:render template="/layouts/Footer"/>

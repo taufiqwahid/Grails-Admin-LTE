@@ -21,15 +21,11 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+%{--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>--}%
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<asset:javascript src="custom.js"/>
-
-
-
-
 <!-- Bootstrap -->
 %{--<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--}%
 <asset:javascript src="bootstrap.bundle.min.js"/>
@@ -38,7 +34,5 @@
 <asset:javascript src="adminlte.js"/>
 <asset:javascript src="custom.js"/>
 <!-- OPTIONAL SCRIPTS -->
-%{--<script src="dist/js/dashboard3.js"></script>--}%
-<asset:javascript src="dashboard3.js"/>
 </body>
 </html>

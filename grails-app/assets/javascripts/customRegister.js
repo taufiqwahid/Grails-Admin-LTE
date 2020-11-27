@@ -1,18 +1,16 @@
 $(document).ready(function () {
 
-    function character(){
-        var username = $(".username").val()
-        var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-        var uservalid = regEx.test(username);
-
-        if (!uservalid) {
-            $('.username').after('<span class="error">Enter a valid emais</span>');
-        }
-
-
-
-    }
-    character()
+    // function character(){
+    //     var username = $(".username").val()
+    //     var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+    //     var uservalid = regEx.test(username);
+    //
+    //     if (!uservalid) {
+    //         $('.username').after('<span class="error">Enter a valid emais</span>');
+    //     }
+    //
+    // }
+    // character()
 
     jQuery.validator.setDefaults({
         debug: true,

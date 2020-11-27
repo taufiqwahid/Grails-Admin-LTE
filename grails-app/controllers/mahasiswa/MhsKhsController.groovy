@@ -14,7 +14,9 @@ class MhsKhsController {
         def username = springSecurityService.principal.username
         def mahasiswa = Mahasiswa.findByNama(username)
         def nilai = Nilai.findAllByMahasiswa(mahasiswa)
-        println(nilai)
         [nilai: nilai]
+    }
+    def create(){
+
     }
 }
