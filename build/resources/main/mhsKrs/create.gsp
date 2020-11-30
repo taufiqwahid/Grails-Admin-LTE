@@ -9,39 +9,6 @@
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-    <g:form action="create" controller="mhsKrs">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="semester" value="ganjil" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline1">Semester Ganjil</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="semester" value="genap" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline2">Semester Genap</label>
-                        </div>                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <g:actionSubmit value="Submit" class="btn btn-primary"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </g:form>
-
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
@@ -61,22 +28,20 @@
                 <div class="card">
                     <g:form action="saveKrs" controller="mhsKrs">
                         <div class="card-header">
-                            <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
-                            <g:actionSubmit  value="Save" action="saveKrs" class="btn btn-success float-right" />
+                            <h2 class="text-center text-bold"><u>FORM KRS</u></h2>
+                            <g:actionSubmit  value="Save" action="saveKrs" class="btn m-1 btn-primary text-white float-right" />
+                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn text-white btn-warning m-1 float-right"><g:message code="form.button.batal"/></a>
+                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn text-white btn-success"><g:message code="form.show.list"/> </a>
                             <br><br>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="semester" id="exampleRadios1" value="ganjil" required="required" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Semester Ganjil
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="semester" id="exampleRadios2" value="genap">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Semester Genap
-                                </label>
-                            </div>
 
+%{--                            <div class="row">--}%
+%{--                                <div class="input-group mb-3 offset-7 col-5 float-right">--}%
+%{--                                    <select class="custom-select" required="required" name="semester" id="inputGroupSelect03" aria-label="Example select with button addon">--}%
+%{--                                        <option selected value="${semester}"><p class="text-uppercase">Semeter ${semester}</p></option>--}%
+%{--                                    </select>--}%
+%{--                                </div>--}%
+%{--                            </div>--}%
+                            <input type="hidden" value="${semester}" name="semester">
                         </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -98,7 +63,7 @@
                                     <td>${mk.sks}</td>
                                     <td>${mk.semester}</td>
                                     <td class="text-center" id="ygDipilih">
-                                            <input id="pilihanMatkul" class="pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.sks}">
+                                        <input id="pilihanMatkul" title="" class="pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.sks}">
                                     </td>
                                 </tr>
                             </g:each>

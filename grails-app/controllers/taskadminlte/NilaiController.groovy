@@ -13,7 +13,7 @@ class NilaiController {
     def create(){
         def matkul = Matakuliah.list()
         def mahasiswa = Mahasiswa.list()
-        [matkul: matkul,mahasiswa:mahasiswa]
+        [matkul: matkul, mahasiswa:mahasiswa]
     }
     @Secured(['ROLE_ADMIN'])
 

@@ -28,23 +28,20 @@
                 <div class="card">
                     <g:form action="saveKrs" controller="mhsKrs">
                         <div class="card-header">
-                            <h2 class="text-center text-bold">FORM KRS</h2>
-                            <g:actionSubmit  value="Save" action="saveKrs" class="btn btn-primary float-right" />
-                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn btn-success"><g:message code="form.show.list"/> </a>
+                            <h2 class="text-center text-bold"><u>FORM KRS</u></h2>
+                            <g:actionSubmit  value="Save" action="saveKrs" class="btn m-1 btn-primary text-white float-right" />
+                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn text-white btn-warning m-1 float-right"><g:message code="form.button.batal"/></a>
+                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn text-white btn-success"><g:message code="form.show.list"/> </a>
                             <br><br>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="semester" id="exampleRadios1" value="ganjil" required="required" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Semester Ganjil
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="semester" id="exampleRadios2" value="genap">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Semester Genap
-                                </label>
-                            </div>
 
+%{--                            <div class="row">--}%
+%{--                                <div class="input-group mb-3 offset-7 col-5 float-right">--}%
+%{--                                    <select class="custom-select" required="required" name="semester" id="inputGroupSelect03" aria-label="Example select with button addon">--}%
+%{--                                        <option selected value="${semester}"><p class="text-uppercase">Semeter ${semester}</p></option>--}%
+%{--                                    </select>--}%
+%{--                                </div>--}%
+%{--                            </div>--}%
+                            <input type="hidden" value="${semester}" name="semester">
                         </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -66,7 +63,7 @@
                                     <td>${mk.sks}</td>
                                     <td>${mk.semester}</td>
                                     <td class="text-center" id="ygDipilih">
-                                            <input id="pilihanMatkul" class="pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.sks}">
+                                        <input id="pilihanMatkul" title="" class="pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.sks}">
                                     </td>
                                 </tr>
                             </g:each>

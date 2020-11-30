@@ -16,7 +16,6 @@ class MhsJadwalController {
         def mahasiswa = Mahasiswa.findByNama(username)
         def jadwal = Jadwal.findAllByMahasiswa(mahasiswa)
         [jadwal:jadwal]
-
 //        def username = springSecurityService.principal.username
 //        def mahasiswa = Mahasiswa.findByNama(username)
 //        def matakuliah = Matakuliah.list()

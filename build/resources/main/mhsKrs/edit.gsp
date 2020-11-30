@@ -28,8 +28,8 @@
                 <div class="card">
                     <g:form action="edit" controller="mhsKrs">
                         <div class="card-header">
-                            <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
-                            <g:actionSubmit  value="Save" action="saveKrs" class="btn btn-success float-right" />
+                            <h1 class="text-center"><u>EDIT KRS</u></h1>
+                            <a href="${createLink(controller: 'mhsKrs', action: 'list', params: [lang:params.lang])}" class="btn text-white btn-danger m-1 float-right"><g:message code="form.button.batal"/></a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -52,8 +52,8 @@
                                 <td>${mk.matakuliah.sks}</td>
                                 <td>${mk.matakuliah.semester}</td>
                                 <td class="text-center">
-                                    <input id="pilihanMatkul" class="pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.matakuliah.sks}">
-                                    <a class="btn btn-danger text-light" onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang], id: mk.id, action: 'delete', controller:'mhsKrs')}" ><i class="far fa-trash-alt"></i></a>
+                                    <input id="pilihanMatkul" title="Check SKS" class=" m-1 pilihanMatkul" value="${mk.id}" type="checkbox" name="mataKuliah" data-sks="${mk.matakuliah.sks}">
+                                    <a class="border-transparent m-1 bg-transparent text-red" title="Delete"  onclick="return confirm('${message(code: 'alert.message.delete')}')" href="${createLink(params: [lang:params.lang], id: mk.id, action: 'delete', controller:'mhsKrs')}" ><i class="far fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         </g:each>

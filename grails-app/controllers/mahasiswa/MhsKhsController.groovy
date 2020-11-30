@@ -16,7 +16,4 @@ class MhsKhsController {
         def nilai = Nilai.findAllByMahasiswa(mahasiswa)
         [nilai: nilai]
     }
-    def create(){
-
-    }
 }

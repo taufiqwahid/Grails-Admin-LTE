@@ -24,7 +24,8 @@ class MhsKrsController {
 
     def create(){
         def matkul = Matakuliah.findAllBySemester(params.semester)
-        [matkul:matkul]
+        def semester = params.semester
+        [matkul:matkul,semester: semester]
    }
 
     def saveKrs(){
@@ -37,16 +38,21 @@ class MhsKrsController {
                      matakuliah: Matakuliah.findById(item),
                      semester: params.semester,
             )
-            if (mhsKrs.validate()){
+            try {
                 if (MhsKrs.findByMatakuliah(mhsKrs.matakuliah)){
-                    redirect action:'list', controller:'mhsKrs', params:[lang:params.lang]
+                    flash.message = 'Already exist, please choose another !'
+                    redirect action:'create', controller:'mhsKrs', params:[lang:params.lang, semester:params.semester]
                 }else {
                     mhsKrs.save flush: true, failOnError:true
-                    redirect action:'index', controller:'mhsKrs', params:[lang:params.lang]
+                    redirect action:'list', controller:'mhsKrs', params:[lang:params.lang]
                 }
             }
+            catch (Exception e){
+                def matkul = Matakuliah.findAllBySemester(params.semester)
+                def semester = params.semester
+                render controller: 'mhsKrs', view: 'create', params: [lang: params.lang], model: [matkul:matkul,semester: semester]
+            }
         }
-
 
     }
 
@@ -58,8 +64,9 @@ class MhsKrsController {
     def delete(){
         def krsMhs = MhsKrs.get(params.id)
         krsMhs.delete()
-        redirect controller: 'mhsKrs', action: 'list', params: [lang: params.lang]
+        redirect controller: 'mhsKrs', action: 'edit', params: [lang: params.lang]
     }
+
 }
 
 

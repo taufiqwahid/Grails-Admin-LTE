@@ -24,7 +24,7 @@ $(document).ready( function () {
                 let jmlhSks = this.getAttribute('data-sks')
                 total += parseInt(jmlhSks)
                 if (total > 24){
-                    $("#batasSks").html('<b>Batas SKS Yang boleh di ambil adalah 24</b>')
+                    $("#batasSks").html('<p class="text-red">Batas SKS Yang boleh di ambil adalah 24</p>')
                 }
             })
             $("input[name='total']").val(total)
@@ -32,6 +32,8 @@ $(document).ready( function () {
     }
 
     $("#modalPage").trigger('click')
+
+
 
     // $('.nav-link').onclick().addClass('active');
     // $('.nav-link').onclick(function (){

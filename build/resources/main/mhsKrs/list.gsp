@@ -10,7 +10,10 @@
 <g:render template="/layouts/Sidebar"/>
 
 <!-- Main content -->
-<section class="content">
+<button type="button" onclick="printJS('pdfPageKrs', 'html')">
+    Print Form
+</button>
+<section class="content" >
     <div class="container-fluid">
         <g:if test="${flash.message}">
         %{--                <br/><div class="text-center text-red" role="status">${flash.message}</div>--}%
@@ -27,32 +30,33 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.matakuliah"/> </h2>
-                        <g:link action="create" params="[lang: params.lang]">
+                        <h1 class="text-center"><u>KRS</u></h1>
+                        <g:link action="index" controller="mhsKrs" params="[lang: params.lang]">
                             <button class="btn m-1 btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.head.krs"/>  </button>
                         </g:link>
-                        <g:link action="edit" params="[lang: params.lang]">
-                            <button class="btn btn-warning m-1 float-right"><i class="fa fa-plus"></i> <g:message code="default.button.edit.label"/>  </button>
+                        <g:link action="edit" controller="mhsKrs" params="[lang: params.lang]">
+                            <button class="btn btn-warning m-1 text-white float-right"><i class="fa fa-edit"></i> <g:message code="default.button.edit.label"/>  </button>
                         </g:link>
+                        <button id="printIni" onclick="window.print()">PRINT</button>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table table-bordered dt-responsive nowrap" style="width:100%">
+                        <table id="pdfPageKrs" class="table table-bordered dt-responsive nowrap" style="width:100%">
                             <thead class="thead-dark">
                             <tr class="table-primary">
                                 <th class="text-center">#</th>
-                                <th><g:message code="table.head.nama"/> </th>
-                                <th><g:message code="table.head.bebanSks"/> </th>
-                                <th><g:message code="table.head.semester"/></th>
+                                <th class="text-center"><g:message code="table.head.nama"/> </th>
+                                <th class="text-center"><g:message code="table.head.bebanSks"/> </th>
+                                <th class="text-center"><g:message code="table.head.semester"/></th>
                             </tr>
                             </thead>
                             <tbody>
                             <g:each in="${mhsKrs}" var="mk">
                                 <tr>
                                     <td class="text-center">${mk.id}</td>
-                                    <td>${mk.matakuliah.nama}</td>
-                                    <td>${mk.matakuliah.sks}</td>
-                                    <td>${mk.matakuliah.semester}</td>
+                                    <td class="text-center">${mk.matakuliah.nama}</td>
+                                    <td class="text-center">${mk.matakuliah.sks}</td>
+                                    <td class="text-center">${mk.matakuliah.semester}</td>
                                 </tr>
                             </g:each>
                             </tbody>

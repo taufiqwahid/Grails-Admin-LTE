@@ -28,9 +28,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><g:message code="table.card.name"/> <g:message code="table.head.nilai"/> </h3>
-                        <g:link action="create" params="[lang: params.lang]">
-                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>
-                        </g:link>
+%{--                        <g:link action="create" params="[lang: params.lang]">--}%
+%{--                            <button class="btn btn-primary float-right"><i class="fa fa-plus"></i> <g:message code="table.card.tambah"/> </button>--}%
+%{--                        </g:link>--}%
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
